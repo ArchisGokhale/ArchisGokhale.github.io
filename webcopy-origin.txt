@@ -1,0 +1,68 @@
+Uri: https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap
+File Name: C:\Downloaded Web Sites\yja.me\css2-1
+Content Type: text/css
+
+Uri: https://fonts.gstatic.com/s/ibmplexsans/v19/zYX-KVElMYYaJe8bpLHnCwDKhdTeEA.ttf
+File Name: C:\Downloaded Web Sites\yja.me\s\ibmplexsans\v19\zYX-KVElMYYaJe8bpLHnCwDKhdTeEA.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/ibmplexsans/v19/zYX7KVElMYYaJe8bpLHnCwDKhdTm5IVscQ.ttf
+File Name: C:\Downloaded Web Sites\yja.me\s\ibmplexsans\v19\zYX7KVElMYYaJe8bpLHnCwDKhdTm5IVscQ.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/ibmplexsans/v19/zYX7KVElMYYaJe8bpLHnCwDKhdTmrINscQ.ttf
+File Name: C:\Downloaded Web Sites\yja.me\s\ibmplexsans\v19\zYX7KVElMYYaJe8bpLHnCwDKhdTmrINscQ.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/ibmplexsans/v19/zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRscQ.ttf
+File Name: C:\Downloaded Web Sites\yja.me\s\ibmplexsans\v19\zYX7KVElMYYaJe8bpLHnCwDKhdTmvIRscQ.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/ibmplexsans/v19/zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJscQ.ttf
+File Name: C:\Downloaded Web Sites\yja.me\s\ibmplexsans\v19\zYX7KVElMYYaJe8bpLHnCwDKhdTmyIJscQ.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjQ76MIY.ttf
+File Name: C:\Downloaded Web Sites\yja.me\s\ibmplexsans\v19\zYX9KVElMYYaJe8bpLHnCwDKjQ76MIY.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjSL9MIY.ttf
+File Name: C:\Downloaded Web Sites\yja.me\s\ibmplexsans\v19\zYX9KVElMYYaJe8bpLHnCwDKjSL9MIY.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjWr7MIY.ttf
+File Name: C:\Downloaded Web Sites\yja.me\s\ibmplexsans\v19\zYX9KVElMYYaJe8bpLHnCwDKjWr7MIY.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjXr8MIY.ttf
+File Name: C:\Downloaded Web Sites\yja.me\s\ibmplexsans\v19\zYX9KVElMYYaJe8bpLHnCwDKjXr8MIY.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/ibmplexsans/v19/zYXgKVElMYYaJe8bpLHnCwDKtdY.ttf
+File Name: C:\Downloaded Web Sites\yja.me\s\ibmplexsans\v19\zYXgKVElMYYaJe8bpLHnCwDKtdY.ttf
+Content Type: font/ttf
+
+Uri: https://yja.me/
+File Name: C:\Downloaded Web Sites\yja.me\index-3.htm
+Content Type: text/html
+
+Uri: https://yja.me/build.js
+File Name: C:\Downloaded Web Sites\yja.me\build.js
+Content Type: application/javascript
+
+Uri: https://yja.me/dist/texture3.png
+File Name: C:\Downloaded Web Sites\yja.me\dist\texture3.png
+Content Type: image/png
+
+Uri: https://yja.me/generic.css
+File Name: C:\Downloaded Web Sites\yja.me\generic-1.css
+Content Type: text/css
+
+Uri: https://yja.me/new-favicon.png
+File Name: C:\Downloaded Web Sites\yja.me\new-favicon-1.png
+Content Type: image/png
+
+Uri: https://yja.me/normalize.css
+File Name: C:\Downloaded Web Sites\yja.me\normalize-1.css
+Content Type: text/css
+
