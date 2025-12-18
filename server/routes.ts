@@ -27,7 +27,8 @@ function validateContact(body: any) {
   const errors: string[] = [];
   const isString = (v: any) => typeof v === "string";
   const len = (v: string) => v.trim().length;
-  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // Simple email pattern without backtracking (prevents ReDoS)
+  const emailRe = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   if (!isString(body.name) || len(body.name) < 1 || len(body.name) > 100) errors.push("Invalid name");
   if (!isString(body.email) || !emailRe.test(body.email) || len(body.email) > 254) errors.push("Invalid email");

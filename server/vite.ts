@@ -8,6 +8,24 @@ import { nanoid } from "nanoid";
 
 const viteLogger = createLogger();
 
+// Dev server rate limiter (500 req/min per IP)
+const devRateBuckets = new Map<string, number[]>();
+const DEV_RATE_LIMIT_WINDOW_MS = 60_000;
+const DEV_RATE_LIMIT_MAX = 500;
+
+function devRateLimit(req: any, res: any, next: any) {
+  const ip = req.ip || req.connection?.remoteAddress || "unknown";
+  const now = Date.now();
+  const windowStart = now - DEV_RATE_LIMIT_WINDOW_MS;
+  const timestamps = devRateBuckets.get(ip)?.filter((t) => t > windowStart) ?? [];
+  timestamps.push(now);
+  devRateBuckets.set(ip, timestamps);
+  if (timestamps.length > DEV_RATE_LIMIT_MAX) {
+    return res.status(429).send("Too many requests");
+  }
+  next();
+}
+
 export async function setupVite(server: Server, app: Express) {
   const serverOptions = {
     middlewareMode: true,
@@ -29,9 +47,9 @@ export async function setupVite(server: Server, app: Express) {
     appType: "custom",
   });
 
-  app.use(vite.middlewares);
+  app.use(devRateLimit, vite.middlewares);
 
-  app.use("*", async (req, res, next) => {
+  app.use("*", devRateLimit, async (req, res, next) => {
     const url = req.originalUrl;
 
     try {
