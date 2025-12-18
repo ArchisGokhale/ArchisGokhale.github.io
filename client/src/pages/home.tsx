@@ -1,53 +1,147 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { ArrowRight, Zap, Target } from "lucide-react";
 
 export default function Home() {
-  const [text, setText] = useState("");
-  const fullText = `> INITIALIZING SYSTEM...
-> LOADING KERNEL...
-> CONNECTING TO NEURAL NET...
-> ACCESS GRANTED.
-
-WELCOME TO THE PORTFOLIO OF [REDACTED].
-SPECIALIZATION: AAA UI ENGINEERING / WEBGL / CREATIVE TECH.
-
-PLEASE SELECT A MODULE FROM THE NAVIGATION MENU.`;
-
-  useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      setText(fullText.slice(0, i));
-      i++;
-      if (i > fullText.length) clearInterval(interval);
-    }, 30);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="h-full flex flex-col justify-center items-start">
-      <div className="w-full max-w-3xl border border-primary/20 bg-black/80 p-6 md:p-12 shadow-2xl relative overflow-hidden backdrop-blur-sm">
-        {/* Decor */}
-        <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-primary" />
-        <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-primary" />
-        <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-primary" />
-        <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-primary" />
-        
-        <pre className="font-mono text-sm md:text-base lg:text-lg text-primary whitespace-pre-wrap leading-relaxed min-h-[200px]">
-          {text}
-          <span className="animate-pulse">_</span>
-        </pre>
-        
-        <div className="mt-8 flex gap-4">
-           <div className="h-1 bg-primary/20 w-1/3 rounded-full overflow-hidden">
-             <motion.div 
-               className="h-full bg-primary"
-               initial={{ width: "0%" }}
-               animate={{ width: "100%" }}
-               transition={{ duration: 2, ease: "easeInOut" }}
-             />
-           </div>
+    <div className="space-y-8 pb-8">
+      {/* Hero Section */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="grid grid-cols-1 md:grid-cols-3 gap-6"
+      >
+        {/* Main Hero */}
+        <div className="md:col-span-2 steam-panel p-8 border border-secondary/40">
+          <div className="space-y-4">
+            <motion.h1 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-4xl md:text-5xl font-display font-bold text-glow"
+            >
+              ARCHIS GOKHALE
+            </motion.h1>
+            
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="text-lg text-secondary font-mono tracking-wide"
+            >
+              Software Engineer • Systems Builder • ISRO Award Winner
+            </motion.p>
+
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="text-sm leading-relaxed text-foreground/80 max-w-xl"
+            >
+              Architecting resilient infrastructure and shipping production systems. Specialized in low-latency systems, cloud automation, and AI pipelines. Led ISRO SIH 2024 Gold—processing 40% faster. Currently @Northern Trust.
+            </motion.p>
+
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="flex gap-4 pt-4"
+            >
+              <button className="flex items-center gap-2 px-6 py-3 bg-primary/15 border border-primary/60 text-primary font-mono text-sm hover:bg-primary/25 transition-all">
+                <Zap className="w-4 h-4" />
+                View Work
+                <ArrowRight className="w-4 h-4" />
+              </button>
+              <button className="flex items-center gap-2 px-6 py-3 bg-secondary/15 border border-secondary/60 text-secondary font-mono text-sm hover:bg-secondary/25 transition-all">
+                Get In Touch
+              </button>
+            </motion.div>
+          </div>
+
+          {/* Placeholder for profile image */}
+          <div className="mt-8 aspect-video bg-muted/20 border border-dashed border-border rounded-sm flex items-center justify-center">
+            <span className="text-muted-foreground text-sm font-mono">[Hero Image / Video - Add your photo here]</span>
+          </div>
         </div>
-      </div>
+
+        {/* Stats */}
+        <div className="space-y-4">
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3 }}
+            className="steam-panel p-6 border border-accent/40"
+          >
+            <div className="text-3xl font-bold text-accent text-glow-accent">75K+</div>
+            <p className="text-xs text-muted-foreground mt-2">ISRO Award Value</p>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+            className="steam-panel p-6 border border-primary/40"
+          >
+            <div className="text-3xl font-bold text-primary text-glow">4</div>
+            <p className="text-xs text-muted-foreground mt-2">FAANG / Scale-up Internships</p>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5 }}
+            className="steam-panel p-6 border border-secondary/40"
+          >
+            <div className="text-3xl font-bold text-secondary text-glow-secondary">Top 7.4%</div>
+            <p className="text-xs text-muted-foreground mt-2">Buildspace S5</p>
+          </motion.div>
+        </div>
+      </motion.div>
+
+      {/* Quick Overview */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
+        <div className="steam-panel p-6 border border-border/30">
+          <h3 className="text-sm font-display font-bold text-primary mb-4 flex items-center gap-2">
+            <Target className="w-5 h-5" />
+            CORE STRENGTHS
+          </h3>
+          <ul className="space-y-2 text-xs text-foreground/80 font-mono">
+            <li className="flex gap-2"><span className="text-primary">→</span> <span>Distributed Systems & Cloud Infrastructure</span></li>
+            <li className="flex gap-2"><span className="text-accent">→</span> <span>Automation & Infrastructure as Code</span></li>
+            <li className="flex gap-2"><span className="text-secondary">→</span> <span>AI Pipeline Engineering & MLOps</span></li>
+            <li className="flex gap-2"><span className="text-primary">→</span> <span>Low-Latency Systems & Performance Optimization</span></li>
+          </ul>
+        </div>
+
+        <div className="steam-panel p-6 border border-border/30">
+          <h3 className="text-sm font-display font-bold text-secondary mb-4 flex items-center gap-2">
+            <Zap className="w-5 h-5" />
+            QUICK STATS
+          </h3>
+          <div className="grid grid-cols-2 gap-4 text-xs font-mono">
+            <div>
+              <div className="text-primary font-bold">GPA: 9.32/10</div>
+              <div className="text-muted-foreground">MIT Pune '26</div>
+            </div>
+            <div>
+              <div className="text-accent font-bold">40% Faster</div>
+              <div className="text-muted-foreground">ISRO Pipeline</div>
+            </div>
+            <div>
+              <div className="text-secondary font-bold">35% MTTR ↓</div>
+              <div className="text-muted-foreground">Disaster Recovery</div>
+            </div>
+            <div>
+              <div className="text-primary font-bold">1M+ Events</div>
+              <div className="text-muted-foreground">ETL @ Beats</div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 }

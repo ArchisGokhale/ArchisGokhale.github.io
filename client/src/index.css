@@ -6,7 +6,6 @@
 @theme inline {
   --font-mono: "Fira Code", monospace;
   --font-display: "Oxanium", sans-serif;
-  --font-retro: "VT323", monospace;
   --font-tech: "Share Tech Mono", monospace;
 
   --color-background: hsl(var(--background));
@@ -43,36 +42,36 @@
 }
 
 :root {
-  /* CRT / Cyberpunk Palette */
-  --background: 240 20% 3%; /* Very dark, almost black */
-  --foreground: 150 100% 50%; /* Terminal Green */
+  /* Steam-Inspired Palette */
+  --background: 220 25% 8%; /* Dark steam blue */
+  --foreground: 210 100% 95%; /* Bright white */
 
-  --card: 240 10% 6%;
-  --card-foreground: 150 80% 60%;
+  --card: 220 20% 12%;
+  --card-foreground: 210 100% 95%;
 
-  --popover: 240 10% 6%;
-  --popover-foreground: 150 80% 60%;
+  --popover: 220 20% 12%;
+  --popover-foreground: 210 100% 95%;
 
-  --primary: 150 100% 50%; /* Matrix Green */
-  --primary-foreground: 240 20% 3%;
+  --primary: 30 100% 55%; /* Vivid Orange */
+  --primary-foreground: 220 25% 8%;
 
-  --secondary: 280 80% 60%; /* Cyber Purple */
-  --secondary-foreground: 240 20% 3%;
+  --secondary: 220 100% 50%; /* Bright Blue */
+  --secondary-foreground: 220 25% 8%;
 
-  --muted: 240 10% 15%;
-  --muted-foreground: 240 10% 60%;
+  --muted: 220 10% 25%;
+  --muted-foreground: 220 10% 60%;
 
-  --accent: 35 100% 50%; /* Amber Glow */
-  --accent-foreground: 240 20% 3%;
+  --accent: 40 100% 55%; /* Golden Yellow */
+  --accent-foreground: 220 25% 8%;
 
   --destructive: 0 100% 50%;
   --destructive-foreground: 0 0% 100%;
 
-  --border: 150 50% 20%;
-  --input: 240 10% 10%;
-  --ring: 150 100% 50%;
+  --border: 220 20% 20%;
+  --input: 220 20% 15%;
+  --ring: 30 100% 55%;
 
-  --radius: 0rem; /* Sharp edges for retro feel */
+  --radius: 0.25rem;
 }
 
 @layer base {
@@ -81,47 +80,26 @@
   }
   body {
     @apply font-mono antialiased bg-background text-foreground overflow-hidden;
-    background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000000 100%);
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
   }
 }
 
-/* CRT Effects */
 @layer utilities {
+  .steam-panel {
+    background: linear-gradient(135deg, rgba(26, 31, 58, 0.8) 0%, rgba(10, 14, 39, 0.8) 100%);
+    backdrop-filter: blur(10px);
+  }
+
   .text-glow {
-    text-shadow: 0 0 5px hsl(var(--primary) / 0.5), 0 0 10px hsl(var(--primary) / 0.3);
+    text-shadow: 0 0 8px hsl(var(--primary) / 0.6), 0 0 16px hsl(var(--primary) / 0.4);
   }
   
   .text-glow-accent {
-    text-shadow: 0 0 5px hsl(var(--accent) / 0.5), 0 0 10px hsl(var(--accent) / 0.3);
+    text-shadow: 0 0 8px hsl(var(--accent) / 0.6), 0 0 16px hsl(var(--accent) / 0.4);
   }
 
-  .scanlines {
-    background: linear-gradient(
-      to bottom,
-      rgba(255,255,255,0),
-      rgba(255,255,255,0) 50%,
-      rgba(0,0,0,0.2) 50%,
-      rgba(0,0,0,0.2)
-    );
-    background-size: 100% 4px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    z-index: 50;
-  }
-
-  .crt-flicker {
-    animation: flicker 0.15s infinite;
-    pointer-events: none;
-  }
-
-  @keyframes flicker {
-    0% { opacity: 0.97; }
-    50% { opacity: 1; }
-    100% { opacity: 0.98; }
+  .text-glow-secondary {
+    text-shadow: 0 0 8px hsl(var(--secondary) / 0.6), 0 0 16px hsl(var(--secondary) / 0.4);
   }
 
   .glitch-text {
@@ -140,14 +118,14 @@
   
   .glitch-text::before {
     left: 2px;
-    text-shadow: -1px 0 #ff00c1;
+    text-shadow: -1px 0 #ff6b1a;
     clip: rect(44px, 450px, 56px, 0);
     animation: glitch-anim 5s infinite linear alternate-reverse;
   }
   
   .glitch-text::after {
     left: -2px;
-    text-shadow: -1px 0 #00fff9;
+    text-shadow: -1px 0 #1e90ff;
     clip: rect(44px, 450px, 56px, 0);
     animation: glitch-anim2 5s infinite linear alternate-reverse;
   }
@@ -170,18 +148,39 @@
     100% { clip: rect(2px, 9999px, 53px, 0); }
   }
 
-  /* Scrollbar */
+  .gradient-border {
+    position: relative;
+    background-clip: padding-box;
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #ff6b1a, #1e90ff, #ffd700, #ff6b1a);
+    border-radius: inherit;
+    padding: 1px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #000; 
+    background: hsl(var(--background));
   }
   ::-webkit-scrollbar-thumb {
-    background: hsl(var(--primary)); 
+    background: hsl(var(--primary));
+    border-radius: 2px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--accent)); 
+    background: hsl(var(--accent));
   }
 }

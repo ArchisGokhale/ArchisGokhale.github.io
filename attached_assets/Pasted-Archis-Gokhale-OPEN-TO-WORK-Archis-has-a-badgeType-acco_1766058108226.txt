@@ -1,0 +1,685 @@
+Archis Gokhale, #OPEN_TO_WORK
+
+Archis has a {:badgeType} account
+
+Archis Gokhale 
+Incoming Software Engineer @Northern Trust | Ex SDE Intern @ Northern Trust | ISRO SIH Winner‘24 - Team Lead | Prev @Beats By Dre, @Buildspace | Diamond League @GCSB
+
+Engineering@MITWPU
+Pune, Maharashtra, India  Contact info
+9,067 followers 
+500+ connections
+Open to
+
+Add profile section
+
+Enhance profile
+
+Resources
+Open to work
+Product Manager, Student Intern, Software Engineer, SDE and Software Development Intern roles
+
+Show details
+
+Edit
+Tell non-profits you're interested in getting involved with your time and skills
+
+Get started
+
+
+AnalyticsAnalytics
+ Private to you Private to you
+
+1,045 profile views
+1,045 profile views
+Discover who's viewed your profile.Discover who's viewed your profile.
+1,284 post impressions
+1,284 post impressions
+Check out who's engaging with your posts.Check out who's engaging with your posts.
+Past 7 daysPast 7 days
+134 search appearances
+134 search appearances
+See how often you appear in search results.See how often you appear in search results.
+Show all analytics
+AboutAbout
+Hi, I’m Archis Gokhale, a Computer Science and Engineering student at MIT Pune with a passion for using technology to solve impactful problems.
+
+I love building things—whether it’s scalable products, intuitive systems, or a solid cricket innings.
+
+As the leader of Team Cloudweave, I led our ISRO Smart India Hackathon-winning project, where we redesigned satellite imagery processing with AI, slashing processing time by 40%. 
+
+My obsession? Product development—blending clean code and design thinking to create tech that feels effortless for users.
+
+I live in the trenches of Java, Spring Boot, and DSA, solving real-world puzzles with smart, simple solutions. Off-duty, I’m either mentoring developers, sketching prototypes, or chasing sixes on the cricket field.
+
+Let’s connect if:
+
+You build products that users crave, not just tolerate.Hi, I’m Archis Gokhale, a Computer Science and Engineering student at MIT Pune with a passion for using technology to solve impactful problems. I love building things—whether it’s scalable products, intuitive systems, or a solid cricket innings. As the leader of Team Cloudweave, I led our ISRO Smart India Hackathon-winning project, where we redesigned satellite imagery processing with AI, slashing processing time by 40%. My obsession? Product development—blending clean code and design thinking to create tech that feels effortless for users. I live in the trenches of Java, Spring Boot, and DSA, solving real-world puzzles with smart, simple solutions. Off-duty, I’m either mentoring developers, sketching prototypes, or chasing sixes on the cricket field. Let’s connect if: You build products that users crave, not just tolerate.…see more
+Top skills
+Top skills
+Software Development • Web Development • Public Speaking • Machine Learning • Python (Programming Language)
+Software Development • Web Development • Public Speaking • Machine Learning • Python (Programming Language)
+FeaturedFeatured
+
+Post
+Post
+Completed My Internship at Northern Trust 👏 
+
+I’ve officially completed my internship as a Software Engineering Intern in the Technology Recovery & Resiliency team at Northern Trust — my first real step into corporate engineering.
+
+Walking into a global enterprise teaches you things no course prepares you for:
+
+Not just systems, but culture.
+Not just automation, but ownership.
+Not just engineering, but responsibility.
+
+What this journey taught me:
+
+Infrastructure engineering is quiet work with massive impact. 
+When automation runs smoothly, no one notices — when it fails, everyone does.
+
+Automation is more than code — it’s consistency and clarity.
+
+Corporate engineering runs on structure — git discipline, documentation, deployments, reviews, testing.
+
+Calm thinking builds resilient systems.
+
+And above all: Teams > Tools.
+
+What I worked on:
+
+I contributed to Infrastructure Automation, Ansible development, Linux systems, and Disaster Recovery automation — the backend work that keeps operations resilient.
+
+A huge shout-out to my manager and the entire team who shaped this experience in the best possible way.
+
+Thank you Sauradip Moitra for leading with clarity, trust, and direction — and for giving me meaningful work that genuinely accelerated my growth.
+To my team — Tushar Tajne, Soumya Dutta, Anish Kumar, Mukesh Kumar, and Dinesh Neve — thank you for the constant guidance, patience, and support throughout this journey. I’m grateful for everything I learned from each of you.
+A heartfelt thanks to Thomas South, Mary Ekmalian, Rajesh Korde, Colleen Campana and Rachael Wilder for being such incredible mentors. Your insights and time made this internship far richer than I expected.
+
+Special appreciation to Rajesh Puvvada and Pushkar Rangdal for managing all interns with such care, structure, and encouragement — it made a huge difference.
+And finally, thank you Sudhir Kumar, Yayati Zende, Stanis Thiruthuvadoss, Anagha Sawant, Anubha Duhan, Nilima Nair, Robert Stone, Rich Stone, and my fellow intern Charlie Tucker for creating a culture of learning, support, and openness.
+
+Every discussion, review, and suggestion from you all shaped my understanding and helped me grow in ways I’ll carry forward.
+
+A lesson I’ll take with me
+Resiliency isn’t built during an outage — it’s engineered quietly, long before one.
+
+If you’re trying to break into infrastructure, automation, or backend engineering, I’ve collected all my notes and resource packs.
+
+ 👉 Comment “NT”, share your email, and I’ll send everything over.
+hashtag
+
+hashtag#NorthernTrust hashtag#TechnologyRecoveryAndResilience hashtag#InfrastructureAutomation hashtag#EngineeringInternship hashtag#ResilienceByDesign hashtag#EarlyCareer hashtag#TechInternship hashtag#LifeAtNT
+No alternative text description for this image
+likecelebratesupport
+669
+23 comments
+Post
+Post
+Gold Victory at Smart India Hackathon 2024! 🏆
+
+I am beyond thrilled to announce that Team Cloudweave has emerged as Gold Winners at the Smart India Hackathon 2024! Our team solved the challenging Problem Statement ID 1736, a problem presented by none other than the Indian Space Research Organisation (ISRO).
+
+Our journey began among 98,000+ teams, and through relentless dedication, we secured our place as finalists — part of the top 1.075%, where only 1053 teams competed. From there, we had just a 5% chance to be among the top 50 in our problem statement, and an even slimmer chance of 0.00215% to win. These odds highlight the sheer difficulty of what we achieved, but numbers alone cannot capture the true intensity of this experience.
+
+The Challenge: Problem Statement ID 1736
+Our task was to develop an AI-based frame interpolation, video generation, and display system for satellite imagery. The challenge involved complex issues such as deformable clouds, computational complexities, and integrating with modern open-source GIS libraries. It was a monumental task, but we faced it head-on, pushing the boundaries of innovation.
+
+Team Cloudweave: True Heroes
+I could not be prouder of my team.:
+
+Archis Gokhale (Team Lead)
+Rupak Yeware
+Sankalp Gawali
+Soham Rupaye
+Manas Vernekar
+Hazel Ajwani
+Your dedication, hard work, and countless sleepless nights made this victory possible. We achieved this win because we worked together, constantly refining our solution, driven by a shared vision and relentless focus.
+
+Our Mentors:
+Jayshree Ghorpade-Aher
+Bhavana T.
+
+The Rewards and Recognition:
+
+🙌Gold-Plated Trophies
+💫ISRO Internships
+
+The honor of contributing to a nationwide innovation movement, and working with one of India’s most prestigious organizations.
+This experience has been nothing short of transformative. It wasn’t just about coding or solving problems—it was about pushing ourselves to the limit, facing overwhelming challenges, and emerging stronger. The road was grueling, but the journey has been incredibly rewarding.
+
+To everyone watching, remember—success comes when you're willing to go above and beyond.
+
+
+
+
+hashtag#SmartIndiaHackathon hashtag#SIH2024 hashtag#ISRO hashtag#AI hashtag#Innovation hashtag#HackathonWinners hashtag#TeamCloudweave hashtag#SatelliteImagery hashtag#GoldTrophy hashtag#TechInnovation hashtag#CodingChallenges hashtag#WinningMindset hashtag#ISROInternship hashtag#WebGIS hashtag#Leadership hashtag#NationalPride hashtag#HackathonSuccess hashtag#NationBuilding hashtag#InnovationUnderPressure hashtag#Inspiration Engineering@MITWPU Smart India Hackathon MoE's Innovation Cell MIT World Peace University ISRO - Indian Space Research Organization Pankaj Bodani Narendra Modi 
+
+@
+No alternative text description for this image
+likecelebratelove
+1,129
+65 comments
+Post
+Post
+🎉 Double Victory at IIT Jodhpur's Prestigious Competitions! (PROMETEO) 🎉
+Excited to announce that our team has clinched victory in not just one, but BOTH challenging events hosted by the esteemed IIT Jodhpur!
+🏆 Boardroom Challenge:
+As CEO, leading our brilliant team, we embarked on a mission to redefine Samsung's position in the budget smartphone arena. Our strategic proposal, rooted in deep market analysis and innovative thinking, propelled us to the top, securing the 3rd place! This accolade is a testament to our team's dedication, strategic acumen, and innovative approach to overcoming complex business challenges.
+
+🌟 ReviveQuest:
+Our innovative spirit didn't stop there. In the ReviveQuest, we tackled the daunting task of reimagining WeWork's business model. Through a thorough SWOT analysis and creative strategic planning, we successfully presented a revitalized business model that not only addressed its current challenges but also paved the way for a sustainable and profitable future. Our efforts were rewarded with a 2nd place finish, highlighting our team's capability to transform challenges into opportunities for growth.
+
+These back-to-back victories at one of the most prestigious colleges, IIT Jodhpur, were not merely competitions; they were a testament to our team's resilience, collaborative spirit, and relentless pursuit of excellence.
+I am beyond proud of our team's achievements and grateful for the support and encouragement from everyone involved. A huge thank you to IIT Jodhpur for providing us with a platform to showcase our skills and to my team for their hard work and innovative ideas.
+Here's to celebrating these milestones and looking forward to more successes in the future! 
+
+My teammates and their roles:
+Archis Gokhale : CEO 
+Tanish Oswal : CFO
+Durvank Belitkar : Chairman
+Soham Rupaye: CTO
+Swaraj Patil : Minute Taker
+
+hashtag#DoubleVictory hashtag#Innovation hashtag#TeamSuccess hashtag#IITJodhpur hashtag#BoardroomChallenge hashtag#ReviveQuest hashtag#Leadership hashtag#Strategy hashtag#BusinessInnovation hashtag#Entrepreneurship hashtag#Prometeo hashtag#iitjodhpur IIT Jodhpur, Rajasthan
+No alternative text description for this image
+likecelebratelove
+243
+16 comments
+Post
+Post
+🚀 An enlightening 10-minute conversation with Alok Shrivastava, the Associate Director of UR Rao Satellite Centre, Bangalore, and a former Group Director at ISRO for an impressive 35 years! 🛰️
+🌌 We delved into the fascinating world of space exploration, satellite technology, and the incredible achievements of ISRO. It was like a mini-podcast, and the experience was invaluable to me!
+
+✨Reflecting on an extraordinary journey, where I had the privilege to lead the “Startup Expo on ‘Sustainable Innovation and Healthcare’ at the G20 Interfaith Summit, MIT ADT, organized by MIT WPU on September 5th , 6th and 7th. 🌐✨ My deep gratitude goes to Prashant Iyer and Dr. Milind Pande for entrusting me with this incredible opportunity.
+
+🔥🔥Hats off to the video editor of this mini-podcast Dev Desai , you have such a stunning mind!
+
+hashtag#G20InterfaithForum hashtag#IF20G20India
+hashtag#alokshrivastava hashtag#g20 hashtag#g20summit hashtag#g20interfaith hashtag#URSC hashtag#URSCBANGORE hashtag#isro hashtag#isro🚀 hashtag#mitwpu hashtag#space hashtag#chandrayan3 hashtag#media hashtag#adityal13h
+
+likecelebrate
+88
+6 comments
+
+ActivityActivity
+9,067 followers9,067 followers
+
+Create a post
+
+Posts
+
+Comments
+
+Images
+Loaded 9 Posts posts
+Archis’ profile photo
+Archis Gokhale reposted this
+
+View Shreyas Phadnis’  graphic link
+Shreyas PhadnisShreyas Phadnis
+ • 1st1st
+Intern @Northern Trust || Student @MIT WPUIntern @Northern Trust || Student @MIT WPU
+1w • Edited •  1 week ago • Edited • Visible to anyone on or off LinkedIn
+Hello everyone,
+Archis Gokhale, Devanshi Singh and I have built this Agentic AI project together. We’d love to hear your feedback or answer any questions.
+…more
+
+Automata.aiAutomata.ai
+27 followers27 followers
+🚀 Join the waitlist: https://lnkd.in/dYBAhd-G
+
+We built an automated testing tool that lets you write test cases in plain English and executes them automatically.
+No complex code. No repetitive clicking. Just describe what you want to test, and our AI agent handles the rest. 
+
+Why use us?
+
+1) Save hours of manual testing every week 
+2) Catch bugs before your users do 
+3) No need to learn Selenium, Playwright, or testing frameworks 
+4) Test complex workflows in minutes, not hours 
+
+Perfect for:
+
+1) Developers who hate writing test code 
+2) Small teams without dedicated QA 
+3) Startups moving fast and shipping often 
+4) Anyone tired of "click, check, repeat" 
+
+📅 Beta launches February 15th, 2026
+Join the waitlist now and be among the first to test smarter, not harder.
+…more
+
+
+likecelebrate
+47
+2 comments
+1 repost
+
+celebrate
+
+
+
+Archis’ profile photo
+Archis Gokhale reposted this
+
+View Sauradip Moitra’s  graphic link
+Sauradip MoitraSauradip Moitra
+   • 1stPremium • 1st
+Technology Resilience | Data Protection | Automation Engineering | Service Recovery | Banking & FinTech | Payment Solutions | Data Center Infrastructure | Scale Leadership | Board MemberTechnology Resilience | Data Protection | Automation Engineering | Service Recovery | Banking & FinTech | Payment Solutions | Data Center Infrastructure | Scale Leadership | Board Member
+2w •  2 weeks ago • Visible to anyone on or off LinkedIn
+Archis embodies the principle that infrastructure engineering is 'quiet work with massive impact.
+He is a certified 'champ on the floor,' whose enthusiasm for learning and zeal to innovate brought immense value to our Technology Recovery and Resiliency work. His project contributions to Infrastructure Automation at Northern Trust showed great responsibility and ownership. Archis possesses the ideal blend of technical discipline and a profound willingness to improve processes. A top talent !!
+…more
+View Archis Gokhale’s open to work graphic link
+Archis GokhaleArchis Gokhale
+   • YouPremium • You
+Incoming Software Engineer @Northern Trust | Ex SDE Intern @ Northern Trust | ISRO SIH Winner‘24 - Team Lead | Prev @Beats By Dre, @Buildspace | Diamond League @GCSBIncoming Software Engineer @Northern Trust | Ex SDE Intern @ Northern Trust | ISRO SIH Winner‘24 - Team Lead | Prev @Beats By Dre, @Buildspace | Diamond League @GCSB
+Completed My Internship at Northern Trust 👏 
+
+I’ve officially completed my internship as a Software Engineering Intern in the Technology Recovery & Resiliency team at Northern Trust — my first real step into corporate engineering.
+
+Walking into a global enterprise teaches you things no course prepares you for:
+
+Not just systems, but culture.
+Not just automation, but ownership.
+Not just engineering, but responsibility.
+
+What this journey taught me:
+
+Infrastructure engineering is quiet work with massive impact. 
+When automation runs smoothly, no one notices — when it fails, everyone does.
+
+Automation is more than code — it’s consistency and clarity.
+
+Corporate engineering runs on structure — git discipline, documentation, deployments, reviews, testing.
+
+Calm thinking builds resilient systems.
+
+And above all: Teams > Tools.
+
+What I worked on:
+
+I contributed to Infrastructure Automation, Ansible development, Linux systems, and Disaster Recovery automation — the backend work that keeps operations resilient.
+
+A huge shout-out to my manager and the entire team who shaped this experience in the best possible way.
+
+Thank you Sauradip Moitra for leading with clarity, trust, and direction — and for giving me meaningful work that genuinely accelerated my growth.
+To my team — Tushar Tajne, Soumya Dutta, Anish Kumar, Mukesh Kumar, and Dinesh Neve — thank you for the constant guidance, patience, and support throughout this journey. I’m grateful for everything I learned from each of you.
+A heartfelt thanks to Thomas South, Mary Ekmalian, Rajesh Korde, Colleen Campana and Rachael Wilder for being such incredible mentors. Your insights and time made this internship far richer than I expected.
+
+Special appreciation to Rajesh Puvvada and Pushkar Rangdal for managing all interns with such care, structure, and encouragement — it made a huge difference.
+And finally, thank you Sudhir Kumar, Yayati Zende, Stanis Thiruthuvadoss, Anagha Sawant, Anubha Duhan, Nilima Nair, Robert Stone, Rich Stone, and my fellow intern Charlie Tucker for creating a culture of learning, support, and openness.
+
+Every discussion, review, and suggestion from you all shaped my understanding and helped me grow in ways I’ll carry forward.
+
+A lesson I’ll take with me
+Resiliency isn’t built during an outage — it’s engineered quietly, long before one.
+
+If you’re trying to break into infrastructure, automation, or backend engineering, I’ve collected all my notes and resource packs.
+
+ 👉 Comment “NT”, share your email, and I’ll send everything over.
+hashtag
+
+hashtag#NorthernTrust hashtag#TechnologyRecoveryAndResilience hashtag#InfrastructureAutomation hashtag#EngineeringInternship hashtag#ResilienceByDesign hashtag#EarlyCareer hashtag#TechInternship hashtag#LifeAtNT
+…more
+Activate to view larger image,
+No alternative text description for this image
+1/6
+Activate to view larger image,
+likelove
+40
+1 comment
+1 repost
+
+love
+
+
+
+
+Show all posts
+ExperienceExperience
+
+Northern Trust logo
+SDE Intern
+SDE Intern
+Northern Trust · Full-timeNorthern Trust · Full-time
+Jun 2025 - Nov 2025 · 6 mosJun 2025 to Nov 2025 · 6 mos
+On-siteOn-site
+During my internship in the Technology Recovery & Resiliency team at Northern Trust, I built end-to-end infrastructure automation with a strong focus on Ansible, Linux systems, and Disaster Recovery readiness. I designed and developed a complete Certificate Expiry Monitoring POC — including certificate discovery, metadata parsing, HTML reporting with Jinja2, and automated email notifications — while architecting reusable Ansible roles, inventories, and playbooks. I worked extensively with AWX, Git, and Linux fundamentals, performed deep infrastructure validation across servers, implemented system-health checks, and contributed to building a scalable Disaster Recovery Service Catalogue. This role strengthened my foundations in automation, observability, and enterprise-grade engineering practices.During my internship in the Technology Recovery & Resiliency team at Northern Trust, I built end-to-end infrastructure automation with a strong focus on Ansible, Linux systems, and Disaster Recovery readiness. I designed and developed a complete Certificate Expiry Monitoring POC — including certificate discovery, metadata parsing, HTML reporting with Jinja2, and automated email notifications — while architecting reusable Ansible roles, inventories, and playbooks. I worked extensively with AWX, Git, and Linux fundamentals, performed deep infrastructure validation across servers, implemented system-health checks, and contributed to building a scalable Disaster Recovery Service Catalogue. This role strengthened my foundations in automation, observability, and enterprise-grade engineering practices.…see more
+Beats by Dre logo
+Data Analyst Intern
+Data Analyst Intern
+Beats by Dre · InternshipBeats by Dre · Internship
+Sep 2024 - Oct 2024 · 2 mosSep 2024 to Oct 2024 · 2 mos
+California, United States · RemoteCalifornia, United States · Remote
+
+Offer LetterOffer Letter
+Toastmasters International logo
+Core Member MIT-WPU Chapter
+Core Member MIT-WPU Chapter
+Toastmasters International · Part-timeToastmasters International · Part-time
+Apr 2024 - Oct 2024 · 7 mosApr 2024 to Oct 2024 · 7 mos
+Pune, Maharashtra, India · On-sitePune, Maharashtra, India · On-site
+Public Speaking, Special Events and +3 skills
+Innovation Hub logo
+Hackathon Head
+Hackathon Head
+Innovation Hub · Part-timeInnovation Hub · Part-time
+Jan 2022 - Sep 2024 · 2 yrs 9 mosJan 2022 to Sep 2024 · 2 yrs 9 mos
+-Cultivated a dynamic portfolio in orchestrating successful hackathons.
+-Leveraged diverse skills in event planning, team management, and effective communication.
+-Led numerous hackathons, fostering environments of creativity, collaboration, and tangible outcomes.
+-Recognized for winning multiple hackathons, underscoring adeptness in strategic thinking, problem-solving, and leadership.-Cultivated a dynamic portfolio in orchestrating successful hackathons. -Leveraged diverse skills in event planning, team management, and effective communication. -Led numerous hackathons, fostering environments of creativity, collaboration, and tangible outcomes. -Recognized for winning multiple hackathons, underscoring adeptness in strategic thinking, problem-solving, and leadership.-Cultivated a dynamic portfolio in orchestrating successful hackathons. -Leveraged diverse skills in event planning, team management, and effective communication. -Led numerous hackathons, fostering environments of creativity, collaboration, and tangible outcomes. -Recognized for winning multiple hackathons, underscoring adeptness in strategic thinking, problem-solving, and leadership.-Cultivated a dynamic portfolio in orchestrating successful hackathons. -Leveraged diverse skills in event planning, team management, and effective communication. -Led numerous hackathons, fostering environments of creativity, collaboration, and tangible outcomes. -Recognized for winning multiple hackathons, underscoring adeptness in strategic thinking, problem-solving, and leadership.…see more
+Business Intelligence (BI), Global Cross-Functional Team Leadership and +3 skills
+buildspace logo
+Product Development Intern
+Product Development Intern
+buildspace · Internshipbuildspace · Internship
+Jun 2024 - Aug 2024 · 3 mosJun 2024 to Aug 2024 · 3 mos
+San Francisco, California, United States · RemoteSan Francisco, California, United States · Remote
+Excited to share that I’ve been accepted into Season 5 of Nights and Weekends at Buildspace! Out of 32,000+ applicants, I’m honored to have the opportunity to bring my ideas to life alongside an incredible cohort of artists, filmmakers, engineers, founders, designers, and more.Had an amazing the kickoff on June 15th and to an amazing six weeks of creativity and innovation!Excited to share that I’ve been accepted into Season 5 of Nights and Weekends at Buildspace! Out of 32,000+ applicants, I’m honored to have the opportunity to bring my ideas to life alongside an incredible cohort of artists, filmmakers, engineers, founders, designers, and more.Had an amazing the kickoff on June 15th and to an amazing six weeks of creativity and innovation!…see more
+Wireframing, Documentation and +3 skills
+
+
+
+
+
+
+Show all 12 experiences
+EducationEducation
+Engineering@MITWPU logo
+Engineering@MITWPU
+Engineering@MITWPU
+Bachelor of Technology - BTech, Computer EngineeringBachelor of Technology - BTech, Computer Engineering
+2022 - 20262022 - 2026
+Grade: 9.40 CGPAGrade: 9.40 CGPA
+Critical Thinking, React Native and +12 skills
+New India School logo
+New India School
+New India School
+Public Speaking and Public Relations
+Show all 5 educations
+Licenses & certificationsLicenses & certifications
+Indian Space Research Organisation (ISRO) logo
+AI/ML for Geodata Analysis
+AI/ML for Geodata Analysis
+Indian Space Research Organisation (ISRO)Indian Space Research Organisation (ISRO)
+Issued Aug 2023Issued Aug 2023
+Credential ID 1Xck1tLRQHCredential ID 1Xck1tLRQH
+Show credential
+Machine Learning, Deep Learning and +21 skills
+
+Certificate_AIML For GeoSpatial Analysis.pdfCertificate_AIML For GeoSpatial Analysis.pdf
+Hinweis Research logo
+Social Engineering and It's Importance (Research Paper)
+Social Engineering and It's Importance (Research Paper)
+Hinweis ResearchHinweis Research
+Issued Jul 2023Issued Jul 2023
+Show credential
+Cybersecurity and Social Engineering
+Show all 7 licenses & certifications
+ProjectsProjects
+AI based satelite imagery frame interpolation, video generation and display system for WMS services (ISRO)
+AI based satelite imagery frame interpolation, video generation and display system for WMS services (ISRO)
+Engineering@MITWPU logo
+Associated with Engineering@MITWPU
+Associated with Engineering@MITWPU
+Repository: https://github.com/Sankalp-G/cloudweave
+Cloudweave is an AI-powered frame interpolation and video visualization system developed for ISRO’s problem statement on improving the temporal resolution of satellite imagery from OGC-compatible WMS (Web Map Services). It tackles the challenge of infrequent satellite updates—typically one image every 30 minutes—by generating multiple intermediate frames using deep learning, creating smooth and continuous videos that reveal dynamic weather patterns like cloud motion, cyclones, and storms in near real-time.
+
+Powered by the FILM (Frame Interpolation for Large Motion) model, Cloudweave effectively handles deformable objects such as clouds that may appear or vanish between frames. It fetches GeoTIFF imagery from WMS servers like MOSDAC and BHUVAN, applies noise reduction via the Sobel Operator, and performs recursive AI-based interpolation to produce up to 30× more frames. These frames are merged using FFmpeg into seamless videos at one-minute granularity.
+
+The system is fully web-based—built with Python, PyTorch, OpenCV, and FFmpeg on the backend, and React.js with OpenLayers on the frontend. Deployed on Vercel, it overlays generated videos directly onto interactive maps, providing a GPU-accelerated, open-source alternative to commercial tools like Mapbox.
+
+Cloudweave aligns with ISRO’s vision of open, self-reliant geospatial innovation. It delivers 70% faster frame generation via GPU+CPU hybrid processing and 40% sharper edge detection using Sobel filtering. Future extensions include adding temperature, precipitation, and vegetation data layers, advancing India’s capabilities in weather monitoring, defense surveillance, and precision agriculture.Repository: https://github.com/Sankalp-G/cloudweave Cloudweave is an AI-powered frame interpolation and video visualization system developed for ISRO’s problem statement on improving the temporal resolution of satellite imagery from OGC-compatible WMS (Web Map Services). It tackles the challenge of infrequent satellite updates—typically one image every 30 minutes—by generating multiple intermediate frames using deep learning, creating smooth and continuous videos that reveal dynamic weather patterns like cloud motion, cyclones, and storms in near real-time. Powered by the FILM (Frame Interpolation for Large Motion) model, Cloudweave effectively handles deformable objects such as clouds that may appear or vanish between frames. It fetches GeoTIFF imagery from WMS servers like MOSDAC and BHUVAN, applies noise reduction via the Sobel Operator, and performs recursive AI-based interpolation to produce up to 30× more frames. These frames are merged using FFmpeg into seamless videos at one-minute granularity. The system is fully web-based—built with Python, PyTorch, OpenCV, and FFmpeg on the backend, and React.js with OpenLayers on the frontend. Deployed on Vercel, it overlays generated videos directly onto interactive maps, providing a GPU-accelerated, open-source alternative to commercial tools like Mapbox. Cloudweave aligns with ISRO’s vision of open, self-reliant geospatial innovation. It delivers 70% faster frame generation via GPU+CPU hybrid processing and 40% sharper edge detection using Sobel filtering. Future extensions include adding temperature, precipitation, and vegetation data layers, advancing India’s capabilities in weather monitoring, defense surveillance, and precision agriculture.…see more
+Python (Programming Language), React.js and +3 skills
+Other contributorsOther contributors
+
+
+
+5
+VolunteeringVolunteering
+SAHAYATA FOUNDATION logo
+Student Volunteer
+Student Volunteer
+SAHAYATA FOUNDATIONSAHAYATA FOUNDATION
+Jun 2023 - Present · 2 yrs 7 mosJun 2023 - Present · 2 yrs 7 mos
+Social ServicesSocial Services
+Sahayata is and NGO which helps the community:
+What it does: 
+Conducting Awareness Raising Sessions
+Doing Nutritional Assessment to understand the need and requirements
+Distribution of Nutritious Food and Rationing material to needy people for proper utilization
+Providing Counseling Session (One to One as well as in a Group)
+Teaching and coaching class to poor needy children
+
+Skills: Public Speaking · Interpersonal Skills · Educational Fundraising · Leadership · Event Management · Public Relations · Youth Advocacy · CommunicationSahayata is and NGO which helps the community: What it does: Conducting Awareness Raising Sessions Doing Nutritional Assessment to understand the need and requirements Distribution of Nutritious Food and Rationing material to needy people for proper utilization Providing Counseling Session (One to One as well as in a Group) Teaching and coaching class to poor needy children Skills: Public Speaking · Interpersonal Skills · Educational Fundraising · Leadership · Event Management · Public Relations · Youth Advocacy · Communication…see more
+
+Tree Drive in Coordination with GreenHills GroupTree Drive in Coordination with GreenHills Group
+Tree Drive in Coordination with GreenHills GroupTree Drive in Coordination with GreenHills Group
+Student Volunteer
+Student Volunteer
+Student Volunteer
+Mission Neki Mission Neki 
+May 2021 - Present · 4 yrs 8 mosMay 2021 - Present · 4 yrs 8 mos
+EducationEducation
+
+Mission Neki Drive 36.jpgMission Neki Drive 36.jpg
+SkillsSkills
+Ffmpeg
+Ffmpeg
+AI based satelite imagery frame interpolation, video generation and display system for WMS services (ISRO)AI based satelite imagery frame interpolation, video generation and display system for WMS services (ISRO)
+Back-End Web Development
+Back-End Web Development
+AI based satelite imagery frame interpolation, video generation and display system for WMS services (ISRO)AI based satelite imagery frame interpolation, video generation and display system for WMS services (ISRO)
+Show all 99 skills
+RecommendationsRecommendations
+
+ReceivedReceived
+GivenGiven
+Tushar Tajne
+Tushar Tajne
+Tushar Tajne
+· 1stFirst degree connection
+2nd VP | Lead Infra DR Automations | Ansible AWX | Docker | DevOps | Python | Flask | REST API | Azure Cloud | Azure EventHub | Azure Functions | CICD | Azure DevOps | vRealize | vRO | Kubernetes | AI | ML2nd VP | Lead Infra DR Automations | Ansible AWX | Docker | DevOps | Python | Flask | REST API | Azure Cloud | Azure EventHub | Azure Functions | CICD | Azure DevOps | vRealize | vRO | Kubernetes | AI | ML
+November 24, 2025, Tushar managed Archis directlyNovember 24, 2025, Tushar managed Archis directly
+Archis completed his internship with our team and consistently demonstrated excellent technical understanding, problem-solving skills, and eagerness to learn. He picked up new concepts quickly and contributed meaningfully to our project deliverables. He will be an asset to any organization looking for a motivated and fast-learning professional.Archis completed his internship with our team and consistently demonstrated excellent technical understanding, problem-solving skills, and eagerness to learn. He picked up new concepts quickly and contributed meaningfully to our project deliverables. He will be an asset to any organization looking for a motivated and fast-learning professional.
+Dr. Prashant Iyer
+Dr. Prashant Iyer
+Dr. Prashant Iyer
+· 1stFirst degree connection
+Director – Ecosystem Development, Wadhwani Foundation | Strategic Leader in Startup & SMB Growth | Ecosystem Builder | From Battlefield to Boardroom – Inspired by Chhatrapati Shivaji Maharaj’s Timeless WisdomDirector – Ecosystem Development, Wadhwani Foundation | Strategic Leader in Startup & SMB Growth | Ecosystem Builder | From Battlefield to Boardroom – Inspired by Chhatrapati Shivaji Maharaj’s Timeless Wisdom
+August 31, 2024, Dr. Prashant managed Archis directlyAugust 31, 2024, Dr. Prashant managed Archis directly
+I had the pleasure of working closely with Archis Gokhale, a remarkable MIT WPU student in the Innovation Hub with a deep passion for technology and startups. Archis stands out for his incredible technical acumen and his relentless drive to learn and make things happen. One of Archis's most impressive achievements was his leadership role in the NASA Space Apps Challenge. His execution was nothing short of exceptional along with his 2 co-leaders. He not only guided the team with clarity and purpose but also ensured that every aspect of the project was meticulously planned and executed. His ability to navigate complex challenges while keeping the team motivated and focused was a testament to his leadership skills.
+
+Archis is the kind of individual who doesn't just talk about ideas; he brings them to life. His enthusiasm for learning and his commitment to excellence make him an asset to any team. I do not doubt that he will continue to make significant contributions to the tech and startup world.
+
+I highly recommend Archis to anyone looking for a dynamic, innovative, and results-driven leader.I had the pleasure of working closely with Archis Gokhale, a remarkable MIT WPU student in the Innovation Hub with a deep passion for technology and startups. Archis stands out for his incredible technical acumen and his relentless drive to learn and make things happen. One of Archis's most impressive achievements was his leadership role in the NASA Space Apps Challenge. His execution was nothing short of exceptional along with his 2 co-leaders. He not only guided the team with clarity and purpose but also ensured that every aspect of the project was meticulously planned and executed. His ability to navigate complex challenges while keeping the team motivated and focused was a testament to his leadership skills. Archis is the kind of individual who doesn't just talk about ideas; he brings them to life. His enthusiasm for learning and his commitment to excellence make him an asset to any team. I do not doubt that he will continue to make significant contributions to the tech and startup world. I highly recommend Archis to anyone looking for a dynamic, innovative, and results-driven leader.…see more
+Show all 10 received
+PublicationsPublications
+American Sign Language Detection using Deep Learning
+American Sign Language Detection using Deep Learning
+IEEE · Jan 22, 2024IEEE · Jan 22, 2024
+Show publication
+This paper presents a novel approach to hand gesture detection and recognition using machine learning techniques. The proposed approach employs Recurrent Convolutional Neural Networks (RCNNs) for hand gesture recognition, which outperforms traditional computer vision techniques. The system was trained and evaluated on a large dataset of diverse hand gestures, demonstrating high accuracy and processing efficiency. Additionally, the system was put to the test in real-world scenarios, showcasing its potential for practical applications in gaming, sign language interpretation, and human-computer interaction. In addition, this paper presents a novel approach to American Sign Language (ASL) recognition using deep learning techniques, specifically Long Short-Term Memory (LSTM) networks. The proposed method involves collecting a dataset of ASL letters using a webcam and custom-built software that enables users to perform ASL gestures in front of the camera. The dataset was carefully designed with various variations, such as different hand shapes, orientations, and lighting conditions, to improve the recognition system's accuracy. The pre-processed images were then used to train an LSTM model, which achieved a remarkable 92% accuracy. In order to pre-process the photographs and extract important features, the Mediapipe module was employed, and it was found to be a reliable and efficient solution for handling the volume of data. The team's approach could be used to help deaf people and others who don't speak sign language communicate. The experimental results and implementation details provide a comprehensive understanding of the proposed approach and its potential for future developments in hand gesture detection and recognition using machine learning and Python.This paper presents a novel approach to hand gesture detection and recognition using machine learning techniques. The proposed approach employs Recurrent Convolutional Neural Networks (RCNNs) for hand gesture recognition, which outperforms traditional computer vision techniques. The system was trained and evaluated on a large dataset of diverse hand gestures, demonstrating high accuracy and processing efficiency. Additionally, the system was put to the test in real-world scenarios, showcasing its potential for practical applications in gaming, sign language interpretation, and human-computer interaction. In addition, this paper presents a novel approach to American Sign Language (ASL) recognition using deep learning techniques, specifically Long Short-Term Memory (LSTM) networks. The proposed method involves collecting a dataset of ASL letters using a webcam and custom-built software that enables users to perform ASL gestures in front of the camera. The dataset was carefully designed with various variations, such as different hand shapes, orientations, and lighting conditions, to improve the recognition system's accuracy. The pre-processed images were then used to train an LSTM model, which achieved a remarkable 92% accuracy. In order to pre-process the photographs and extract important features, the Mediapipe module was employed, and it was found to be a reliable and efficient solution for handling the volume of data. The team's approach could be used to help deaf people and others who don't speak sign language communicate. The experimental results and implementation details provide a comprehensive understanding of the proposed approach and its potential for future developments in hand gesture detection and recognition using machine learning and Python.…see more
+Other authorsOther authors
+
+
+
+Social Engineering and It's Importance
+Social Engineering and It's Importance
+Hinweis ResearchHinweis Research
+Show publication
+Honors & awardsHonors & awards
+Intra-Collegiate Winner SIH '24
+Intra-Collegiate Winner SIH '24
+Issued by SIH · Sep 2024Issued by SIH · Sep 2024
+Engineering@MITWPU logo
+Associated with Engineering@MITWPU
+Associated with Engineering@MITWPU
+Intra-Collegiate Winner SIH '23
+Intra-Collegiate Winner SIH '23
+Issued by SIH · Oct 2023Issued by SIH · Oct 2023
+Smart India Hackathon 2023 is a nationwide initiative to provide students a platform to solve some of the pressing problems we face in our daily lives, and thus inculcate a culture of product innovation and a mindset of problem solving.Smart India Hackathon 2023 is a nationwide initiative to provide students a platform to solve some of the pressing problems we face in our daily lives, and thus inculcate a culture of product innovation and a mindset of problem solving.
+Show all 4 honors & awards
+OrganizationsOrganizations
+E-CELL MIT-WPU
+E-CELL MIT-WPU
+Head of Secretariat · May 2024 - PresentHead of Secretariat · May 2024 - Present
+Core Member MIT-WPU Chapter
+Core Member MIT-WPU Chapter
+Core Member · Apr 2024 - PresentCore Member · Apr 2024 - Present
+As a core member of Toastmasters International MIT-WPU Chapter, I help organize and lead our club’s activities, including speech contests and workshops. I participate in meetings and provide feedback to fellow members to support their growth in public speaking and leadership. This role has helped me improve my own communication skills, making it easier for me to explain ideas clearly and confidently. It has also taught me the value of listening, thinking critically, and working well with a team. My involvement in Toastmasters is a rewarding experience that continues to help me grow both personally and professionally.
+Skills: Special Events · Public Speaking · Management · Team Leadership · Community OutreachAs a core member of Toastmasters International MIT-WPU Chapter, I help organize and lead our club’s activities, including speech contests and workshops. I participate in meetings and provide feedback to fellow members to support their growth in public speaking and leadership. This role has helped me improve my own communication skills, making it easier for me to explain ideas clearly and confidently. It has also taught me the value of listening, thinking critically, and working well with a team. My involvement in Toastmasters is a rewarding experience that continues to help me grow both personally and professionally. Skills: Special Events · Public Speaking · Management · Team Leadership · Community Outreach…see more
+Show all 7 organizations
+InterestsInterests
+Top VoicesTop Voices
+CompaniesCompanies
+GroupsGroups
+NewslettersNewsletters
+SchoolsSchools
+Nick Martin
+Nick Martin
+Nick Martin
+· 2ndSecond degree connection
+Bridge builder | CEO @ TechChange | Prof @ Columbia | Top Voice (325K+)Bridge builder | CEO @ TechChange | Prof @ Columbia | Top Voice (325K+)
+328,437 followers328,437 followers
+
+Following
+Nandini Agrawal
+Nandini Agrawal
+Nandini Agrawal
+· 2ndSecond degree connection
+Guinness Book of World Records | GIC (Private Equity) | BCG | Dr. | CA - AIR 1 | TEDx | ACCA (AIR 1, AWR 7&9)Guinness Book of World Records | GIC (Private Equity) | BCG | Dr. | CA - AIR 1 | TEDx | ACCA (AIR 1, AWR 7&9)
+519,020 followers519,020 followers
+
+Following
+Show all Top Voices
+Profile language
+English
+
+Public profile & URL
+www.linkedin.com/in/archisgokhale
+
+Who your viewers also viewedWho your viewers also viewed
+ Private to you Private to you
+
+Varad Charholikar
+Varad Charholikar
+Varad Charholikar
+· 1stFirst degree connection
+Student at MIT WPUStudent at MIT WPU
+Message
+Ananya Shimpi is open to work
+Ananya Shimpi
+Ananya Shimpi
+· 1stFirst degree connection
+Agentic AI Intern @ Tech Mahindra | Winner @ Eaton Pratibha Excellence Awards ’25 | Co-Founder @ GraphSense SolutionsAgentic AI Intern @ Tech Mahindra | Winner @ Eaton Pratibha Excellence Awards ’25 | Co-Founder @ GraphSense Solutions
+Message
+Atharva Duse
+Atharva Duse
+Atharva Duse
+· 1stFirst degree connection
+SDE Intern @ Vendout India Pvt. Ltd. || Final Year Computer Engineering Student @ MITWPU || Head of Placement & Internships @ CDC MIT-WPUSDE Intern @ Vendout India Pvt. Ltd. || Final Year Computer Engineering Student @ MITWPU || Head of Placement & Internships @ CDC MIT-WPU
+Message
+Aastha Konde
+Aastha Konde
+Aastha Konde
+· 1stFirst degree connection
+Data Scientist Intern @ OmegaMetrix | Ex-Intern @ BMC Software | CSE student @ MIT WPU | Specialising in AI & MLData Scientist Intern @ OmegaMetrix | Ex-Intern @ BMC Software | CSE student @ MIT WPU | Specialising in AI & ML
+Message
+Aardra Patil is open to work
+Aardra Patil
+Aardra Patil
+· 1stFirst degree connection
+BTech CSE Undergrad | MITWPU | Computer Society Of India (CSI) | Team Vegapod HyperloopBTech CSE Undergrad | MITWPU | Computer Society Of India (CSI) | Team Vegapod Hyperloop
+Message
+Show all
+People you may knowPeople you may know
+From your companyFrom your company
+
+Justin Chapman
+Justin Chapman
+Justin Chapman
+Executive Vice President - Group Head of Strategic Partnerships Digital Assets and Financial MarketsExecutive Vice President - Group Head of Strategic Partnerships Digital Assets and Financial Markets
+
+Connect
+Rishab Bachhawat, CIPM
+Rishab Bachhawat, CIPM
+Rishab Bachhawat, CIPM
+Senior Vice PresidentSenior Vice President
+
+Connect
+Vivek khandelwal
+Vivek khandelwal
+Vivek khandelwal
+Vice President | INSEAD | Digital Transformation | Technology strategy, Delivery, ArchitectureVice President | INSEAD | Digital Transformation | Technology strategy, Delivery, Architecture
+
+Connect
+Pallavi Vispute
+Pallavi Vispute
+Pallavi Vispute
+“Financial Analyst at Northern Trust | MBA in Finance and International Business Management”“Financial Analyst at Northern Trust | MBA in Finance and International Business Management”
+
+Connect
+Mohd Hamza
+Mohd Hamza
+Mohd Hamza
+Senior Transfer Agency Analyst | Investor Services | AML/KYC | Fund Operations | Subscription & Redemption Processing | FATCA/CRS | Reconciliation | Client Servicing | NAV Cycle SupportSenior Transfer Agency Analyst | Investor Services | AML/KYC | Fund Operations | Subscription & Redemption Processing | FATCA/CRS | Reconciliation | Client Servicing | NAV Cycle Support
+
+Connect
+Show all
+You might likeYou might like
+Pages for youPages for you
+
+ANZ logo
+ANZ
+ANZ
+BankingBanking
+750,023 followers750,023 followers
+
+
+
+7 connections work here
+
+Follow
+Larsen & Toubro logo
+Larsen & Toubro
+Larsen & Toubro
+Executive OfficesExecutive Offices
+4,894,683 followers4,894,683 followers
+
+
+
+3 connections work here
+
+Follow
+Show all
+About
+Accessibility
+Talent Solutions
+Professional Community Policies
+Careers
+Marketing Solutions
+
+Privacy & Terms 
+Ad Choices
+Advertising
+Sales Solutions
+Mobile
+Small Business
+Safety Center
+Questions?
+Visit our Help Center.
+
+Manage your account and privacy
+Go to your Settings.
+
+Recommendation transparency
+Learn more about Recommended Content.
+
+Select Language
+
+English (English)
+LinkedIn Corporation © 2025

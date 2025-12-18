@@ -1,0 +1,140 @@
+
+Experience
+
+Northern Trust logo
+SDE Intern
+SDE Intern
+Northern Trust · Full-timeNorthern Trust · Full-time
+Jun 2025 - Nov 2025 · 6 mosJun 2025 to Nov 2025 · 6 mos
+On-siteOn-site
+During my internship in the Technology Recovery & Resiliency team at Northern Trust, I built end-to-end infrastructure automation with a strong focus on Ansible, Linux systems, and Disaster Recovery readiness. I designed and developed a complete Certificate Expiry Monitoring POC — including certificate discovery, metadata parsing, HTML reporting with Jinja2, and automated email notifications — while architecting reusable Ansible roles, inventories, and playbooks. I worked extensively with AWX, Git, and Linux fundamentals, performed deep infrastructure validation across servers, implemented system-health checks, and contributed to building a scalable Disaster Recovery Service Catalogue. This role strengthened my foundations in automation, observability, and enterprise-grade engineering practices.
+During my internship in the Technology Recovery & Resiliency team at Northern Trust, I built end-to-end infrastructure automation with a strong focus on Ansible, Linux systems, and Disaster Recovery readiness. I designed and developed a complete Certificate Expiry Monitoring POC — including certificate discovery, metadata parsing, HTML reporting with Jinja2, and automated email notifications — while architecting reusable Ansible roles, inventories, and playbooks. I worked extensively with AWX, Git, and Linux fundamentals, performed deep infrastructure validation across servers, implemented system-health checks, and contributed to building a scalable Disaster Recovery Service Catalogue. This role strengthened my foundations in automation, observability, and enterprise-grade engineering practices.
+Beats by Dre logo
+Data Analyst Intern
+Data Analyst Intern
+Beats by Dre · InternshipBeats by Dre · Internship
+Sep 2024 - Oct 2024 · 2 mosSep 2024 to Oct 2024 · 2 mos
+California, United States · RemoteCalifornia, United States · Remote
+
+Offer LetterOffer Letter
+Toastmasters International logo
+Core Member MIT-WPU Chapter
+Core Member MIT-WPU Chapter
+Toastmasters International · Part-timeToastmasters International · Part-time
+Apr 2024 - Oct 2024 · 7 mosApr 2024 to Oct 2024 · 7 mos
+Pune, Maharashtra, India · On-sitePune, Maharashtra, India · On-site
+Skills: Public Speaking · Special Events · Management · Cross-functional Team Leadership · Community Outreach
+Skills: Public Speaking · Special Events · Management · Cross-functional Team Leadership · Community Outreach
+Innovation Hub logo
+Hackathon Head
+Hackathon Head
+Innovation Hub · Part-timeInnovation Hub · Part-time
+Jan 2022 - Sep 2024 · 2 yrs 9 mosJan 2022 to Sep 2024 · 2 yrs 9 mos
+-Cultivated a dynamic portfolio in orchestrating successful hackathons.
+-Leveraged diverse skills in event planning, team management, and effective communication.
+-Led numerous hackathons, fostering environments of creativity, collaboration, and tangible outcomes.
+-Recognized for winning multiple hackathons, underscoring adeptness in strategic thinking, problem-solving, and leadership.-Cultivated a dynamic portfolio in orchestrating successful hackathons. -Leveraged diverse skills in event planning, team management, and effective communication. -Led numerous hackathons, fostering environments of creativity, collaboration, and tangible outcomes. -Recognized for winning multiple hackathons, underscoring adeptness in strategic thinking, problem-solving, and leadership.
+-Cultivated a dynamic portfolio in orchestrating successful hackathons. -Leveraged diverse skills in event planning, team management, and effective communication. -Led numerous hackathons, fostering environments of creativity, collaboration, and tangible outcomes. -Recognized for winning multiple hackathons, underscoring adeptness in strategic thinking, problem-solving, and leadership.-Cultivated a dynamic portfolio in orchestrating successful hackathons. -Leveraged diverse skills in event planning, team management, and effective communication. -Led numerous hackathons, fostering environments of creativity, collaboration, and tangible outcomes. -Recognized for winning multiple hackathons, underscoring adeptness in strategic thinking, problem-solving, and leadership.
+Skills: Business Intelligence (BI) · Global Cross-Functional Team Leadership · Project Team Management · Collaborative Problem Solving · Product Management
+Skills: Business Intelligence (BI) · Global Cross-Functional Team Leadership · Project Team Management · Collaborative Problem Solving · Product Management
+buildspace logo
+Product Development Intern
+Product Development Intern
+buildspace · Internshipbuildspace · Internship
+Jun 2024 - Aug 2024 · 3 mosJun 2024 to Aug 2024 · 3 mos
+San Francisco, California, United States · RemoteSan Francisco, California, United States · Remote
+Excited to share that I’ve been accepted into Season 5 of Nights and Weekends at Buildspace! Out of 32,000+ applicants, I’m honored to have the opportunity to bring my ideas to life alongside an incredible cohort of artists, filmmakers, engineers, founders, designers, and more.Had an amazing the kickoff on June 15th and to an amazing six weeks of creativity and innovation!
+Excited to share that I’ve been accepted into Season 5 of Nights and Weekends at Buildspace! Out of 32,000+ applicants, I’m honored to have the opportunity to bring my ideas to life alongside an incredible cohort of artists, filmmakers, engineers, founders, designers, and more.Had an amazing the kickoff on June 15th and to an amazing six weeks of creativity and innovation!
+Skills: Wireframing · Documentation · Product Requirements · User Stories · Critical Thinking
+Skills: Wireframing · Documentation · Product Requirements · User Stories · Critical Thinking
+
+Top 7.4%.pngTop 7.4%.png
+
+Thank You buildspace.pngThank You buildspace.png
+
+Top 7.4%.pngTop 7.4%.png
+Show all 6 media
+Startup Mahakumbh logo
+Business Delegate
+Business Delegate
+Startup Mahakumbh · Full-timeStartup Mahakumbh · Full-time
+Mar 2024 - May 2024 · 3 mosMar 2024 to May 2024 · 3 mos
+New Delhi, India · On-siteNew Delhi, India · On-site
+IdeaAegis logo
+Founder
+Founder
+IdeaAegis · Full-timeIdeaAegis · Full-time
+Dec 2022 - Feb 2024 · 1 yr 3 mosDec 2022 to Feb 2024 · 1 yr 3 mos
+Pune, Maharashtra, India · On-sitePune, Maharashtra, India · On-site
+Skills: Wireframing · Documentation · Leadership · Media Production · Digital Media · Communication
+Skills: Wireframing · Documentation · Leadership · Media Production · Digital Media · Communication
+NASA International Space Apps Challenge logo
+Overall Coordinator and Local Lead NASA Space Apps Challenge
+Overall Coordinator and Local Lead NASA Space Apps Challenge
+NASA International Space Apps ChallengeNASA International Space Apps Challenge
+Sep 2023 - Nov 2023 · 3 mosSep 2023 to Nov 2023 · 3 mos
+Key Contributions:
+
+-Spearheaded the organization of the NASA Space Apps Challenge at the local level.
+
+-Fostered an environment that encouraged creativity, collaboration, and innovative problem-solving.
+
+-Successfully managed logistics, schedules, and resources to deliver a high-quality hackathon experience.
+
+-Led teams through high-pressure situations, ensuring efficient problem-solving and goal attainment.
+
+-Recognized for leadership skills and strategic thinking, contributing to the success and impact of the event.
+Key Contributions: -Spearheaded the organization of the NASA Space Apps Challenge at the local level. -Fostered an environment that encouraged creativity, collaboration, and innovative problem-solving. -Successfully managed logistics, schedules, and resources to deliver a high-quality hackathon experience. -Led teams through high-pressure situations, ensuring efficient problem-solving and goal attainment. -Recognized for leadership skills and strategic thinking, contributing to the success and impact of the event.
+Hack-X MIT-WPU logo
+Tech Team Mentor
+Tech Team Mentor
+Hack-X MIT-WPUHack-X MIT-WPU
+Sep 2022 - Oct 2023 · 1 yr 2 mosSep 2022 to Oct 2023 · 1 yr 2 mos
+MIT World Peace University logo
+Research And Development Intern
+Research And Development Intern
+MIT World Peace University · InternshipMIT World Peace University · Internship
+Jul 2022 - Aug 2023 · 1 yr 2 mosJul 2022 to Aug 2023 · 1 yr 2 mos
+Pune, Maharashtra, India · On-sitePune, Maharashtra, India · On-site
+As a computer science researcher, I specialized in developing advanced machine learning models for hand gesture detection and recognition. My work leveraged Recurrent Convolutional Neural Networks (RCNNs) and Long Short-Term Memory (LSTM) networks to create highly accurate and efficient real-time systems, particularly focused on American Sign Language (ASL) recognition. By utilizing frameworks such as Mediapipe, OpenCV, and Keras, I designed a robust model that achieved 98% accuracy, demonstrating its practical applications in areas like sign language interpretation, gaming, and human-computer interaction.
+
+I had expertise in deep learning techniques, custom dataset creation, and feature extraction, with a focus on accessibility and improving interaction for individuals with disabilities. My research and development efforts were aimed at enhancing human-computer interaction through innovative technologies that bridged the communication gap for people with disabilities.
+As a computer science researcher, I specialized in developing advanced machine learning models for hand gesture detection and recognition. My work leveraged Recurrent Convolutional Neural Networks (RCNNs) and Long Short-Term Memory (LSTM) networks to create highly accurate and efficient real-time systems, particularly focused on American Sign Language (ASL) recognition. By utilizing frameworks such as Mediapipe, OpenCV, and Keras, I designed a robust model that achieved 98% accuracy, demonstrating its practical applications in areas like sign language interpretation, gaming, and human-computer interaction. I had expertise in deep learning techniques, custom dataset creation, and feature extraction, with a focus on accessibility and improving interaction for individuals with disabilities. My research and development efforts were aimed at enhancing human-computer interaction through innovative technologies that bridged the communication gap for people with disabilities. 
+Skills: OpenCV · Python (Programming Language) · Convolutional Neural Networks (CNN) · Long Short-term Memory (LSTM) · Recurrent Neural Networks (RNN) · Mediapipe · Deep Learning · Machine Learning
+Skills: OpenCV · Python (Programming Language) · Convolutional Neural Networks (CNN) · Long Short-term Memory (LSTM) · Recurrent Neural Networks (RNN) · Mediapipe · Deep Learning · Machine Learning
+
+American Sign Language Detection using Deep LearningAmerican Sign Language Detection using Deep Learning
+DIGITAL TASK FORCE logo
+Data Security Analyst
+Data Security Analyst
+DIGITAL TASK FORCE · Full-timeDIGITAL TASK FORCE · Full-time
+Jun 2022 - Aug 2022 · 3 mosJun 2022 to Aug 2022 · 3 mos
+Pune, Maharashtra, IndiaPune, Maharashtra, India
+The Tasks which I performed during the period were but not limited to 
+- Data Recovery
+- Creating Detailed Reports
+- 65B certifications of electronic evidence
+- Networking
+- Pentesting
+-Network Audits
+- Security Audits
+- Demonstrations and presentations
+- Creating General Security Awareness
+- Cryptography
+- Steganography
+- ADK (Android Debugging Toolkit)
+The Tasks which I performed during the period were but not limited to - Data Recovery - Creating Detailed Reports - 65B certifications of electronic evidence - Networking - Pentesting -Network Audits - Security Audits - Demonstrations and presentations - Creating General Security Awareness - Cryptography - Steganography - ADK (Android Debugging Toolkit)
+Skills: Cryptography · Documentation · Firewalls · Public Speaking · IT Audit · 65B · Networking · Security · Pentesting · Penetration Testing · Critical Thinking · Steganography · Public Relations · Computer Forensics · Security Audits
+Skills: Cryptography · Documentation · Firewalls · Public Speaking · IT Audit · 65B · Networking · Security · Pentesting · Penetration Testing · Critical Thinking · Steganography · Public Relations · Computer Forensics · Security Audits
+
+ARCHIS GOKHALE DIGITAL TASK FORCE INTERNSHIP COMPLETION CERTIFICATE 2022.pdfARCHIS GOKHALE DIGITAL TASK FORCE INTERNSHIP COMPLETION CERTIFICATE 2022.pdf
+Virtually Testing Foundation logo
+Penetration Testing Intern
+Penetration Testing Intern
+Virtually Testing Foundation · InternshipVirtually Testing Foundation · Internship
+Oct 2021 - Dec 2021 · 3 mosOct 2021 to Dec 2021 · 3 mos
+California, United States · RemoteCalifornia, United States · Remote
+Skills: Documentation · Public Speaking · IT Audit · Security · Critical Thinking · Public Relations
+Skills: Documentation · Public Speaking · IT Audit · Security · Critical Thinking · Public Relations
+
+WEEK 10 VTF CERTIFICATE.pdf
