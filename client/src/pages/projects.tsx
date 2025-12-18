@@ -61,63 +61,63 @@ const PROJECTS = [
 export default function Projects() {
   return (
     <div className="space-y-10 pb-8">
-      <header className="flex items-center justify-between border-b border-primary/20 pb-6">
+      <header className="flex items-center justify-between border-b border-primary/20 pb-4 lg:pb-6">
         <div>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground tracking-wider">PORTFOLIO</h2>
-          <p className="text-base font-mono text-muted-foreground mt-3">
+          <h2 className="text-2xl lg:text-5xl font-display font-bold text-foreground tracking-wider">PORTFOLIO</h2>
+          <p className="text-xs lg:text-base font-mono text-muted-foreground mt-2 lg:mt-3">
             Selected Projects • <span className="text-primary font-bold">6 Featured</span> • Shipped to Production
           </p>
         </div>
       </header>
 
       {/* Featured Projects */}
-      <div className="space-y-10">
+      <div className="space-y-6 lg:space-y-10">
         {PROJECTS.filter(p => p.featured).map((project, index) => (
           <motion.div
             key={project.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8"
           >
             {/* Placeholder */}
-            <div className="md:col-span-1 steam-panel border border-border/30 aspect-square flex items-center justify-center rounded-lg bg-muted/10 hover:border-primary/60 transition-all">
-              <div className="text-center space-y-3">
-                <Code2 className="w-12 h-12 text-muted-foreground mx-auto" />
-                <p className="text-base text-muted-foreground font-mono">Image coming soon</p>
+            <div className="lg:col-span-1 steam-panel border border-border/30 aspect-square flex items-center justify-center rounded-lg bg-muted/10 hover:border-primary/60 transition-all">
+              <div className="text-center space-y-2 lg:space-y-3 px-2">
+                <Code2 className="w-8 lg:w-12 h-8 lg:h-12 text-muted-foreground mx-auto" />
+                <p className="text-xs lg:text-base text-muted-foreground font-mono">Image coming soon</p>
               </div>
             </div>
 
             {/* Content */}
-            <div className="md:col-span-2 steam-panel border border-primary/20 p-8 hover:border-primary/60 transition-all rounded-lg">
-              <div className="flex items-start justify-between mb-6">
+            <div className="lg:col-span-2 steam-panel border border-primary/20 p-4 lg:p-8 hover:border-primary/60 transition-all rounded-lg">
+              <div className="flex items-start justify-between gap-3 mb-4 lg:mb-6">
                 <div>
-                  <h3 className="text-2xl font-display font-bold text-primary mb-2">{project.title}</h3>
-                  <p className="text-base text-accent font-mono font-semibold">{project.subtitle}</p>
+                  <h3 className="text-lg lg:text-2xl font-display font-bold text-primary mb-1 lg:mb-2">{project.title}</h3>
+                  <p className="text-xs lg:text-base text-accent font-mono font-semibold">{project.subtitle}</p>
                 </div>
-                <Award className="w-6 h-6 text-primary opacity-50 flex-shrink-0" />
+                <Award className="w-5 lg:w-6 h-5 lg:h-6 text-primary opacity-50 flex-shrink-0" />
               </div>
 
-              <p className="text-lg text-foreground/85 mb-6 leading-relaxed">{project.description}</p>
+              <p className="text-sm lg:text-lg text-foreground/85 mb-4 lg:mb-6 leading-relaxed">{project.description}</p>
 
-              <div className="mb-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
-                <div className="flex items-center gap-3 text-base text-primary font-mono font-semibold">
-                  <Zap className="w-5 h-5" />
+              <div className="mb-4 lg:mb-6 p-3 lg:p-4 bg-primary/5 border border-primary/20 rounded-lg">
+                <div className="flex items-center gap-2 lg:gap-3 text-xs lg:text-base text-primary font-mono font-semibold">
+                  <Zap className="w-4 lg:w-5 h-4 lg:h-5" />
                   <span>{project.impact}</span>
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-3 mb-6">
+              <div className="flex flex-wrap gap-2 lg:gap-3 mb-4 lg:mb-6">
                 {project.tags.map(tag => (
-                  <span key={tag} className="text-sm px-3 py-2 bg-secondary/10 text-secondary border border-secondary/20 rounded-lg font-mono font-semibold">
+                  <span key={tag} className="text-xs lg:text-sm px-2 lg:px-3 py-1 lg:py-2 bg-secondary/10 text-secondary border border-secondary/20 rounded-lg font-mono font-semibold">
                     {tag}
                   </span>
                 ))}
               </div>
 
-              <div className="flex gap-4 justify-end pt-4 border-t border-white/5">
-                <button className="flex items-center gap-2 text-base text-muted-foreground hover:text-primary transition-colors font-mono font-semibold">
-                  <Github className="w-5 h-5" /> Code
+              <div className="flex flex-col lg:flex-row gap-2 lg:gap-4 justify-end pt-3 lg:pt-4 border-t border-white/5">
+                <button className="flex items-center justify-center lg:justify-start gap-2 text-xs lg:text-base text-muted-foreground hover:text-primary transition-colors font-mono font-semibold">
+                  <Github className="w-4 lg:w-5 h-4 lg:h-5" /> Code
                 </button>
                 <button className="flex items-center gap-2 text-base text-muted-foreground hover:text-primary transition-colors font-mono font-semibold">
                   <ExternalLink className="w-5 h-5" /> Demo

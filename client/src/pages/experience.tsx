@@ -67,52 +67,52 @@ const ACHIEVEMENTS = [
 
 export default function Experience() {
   return (
-    <div className="space-y-10 pb-8">
+    <div className="space-y-6 lg:space-y-10 pb-8">
       <header>
-        <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground tracking-wider">CAREER</h2>
-        <p className="text-base font-mono text-muted-foreground mt-3">
+        <h2 className="text-2xl lg:text-5xl font-display font-bold text-foreground tracking-wider">CAREER</h2>
+        <p className="text-xs lg:text-base font-mono text-muted-foreground mt-2 lg:mt-3">
           FAANG & Scale-ups | Infrastructure • AI/ML • Full-Stack | Award-Winning
         </p>
       </header>
 
       {/* Work Experience */}
-      <div className="space-y-8">
-        <h3 className="text-2xl md:text-3xl font-display font-bold text-primary">WORK EXPERIENCE</h3>
+      <div className="space-y-4 lg:space-y-8">
+        <h3 className="text-xl lg:text-3xl font-display font-bold text-primary">WORK EXPERIENCE</h3>
         {EXPERIENCES.map((exp, index) => (
           <motion.div
             key={exp.id}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="steam-panel border border-border/30 p-8 hover:border-primary/40 transition-all group rounded-lg"
+            className="steam-panel border border-border/30 p-4 lg:p-8 hover:border-primary/40 transition-all group rounded-lg"
           >
-            <div className="flex items-start gap-6">
+            <div className="flex flex-col lg:flex-row items-start gap-3 lg:gap-6">
               {/* Company Icon */}
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 hidden lg:block">
                 <div className="w-16 h-16 steam-panel border border-border/30 rounded-lg p-3 flex items-center justify-center group-hover:border-primary/60 transition-all">
                   <Briefcase className="w-8 h-8 text-primary" />
                 </div>
               </div>
 
               {/* Content */}
-              <div className="flex-1">
-                <h4 className="text-xl font-mono font-bold text-primary mb-2 group-hover:text-glow transition-all">
+              <div className="flex-1 w-full">
+                <h4 className="text-base lg:text-xl font-mono font-bold text-primary mb-1 lg:mb-2 group-hover:text-glow transition-all">
                   {exp.role}
                 </h4>
-                <p className="text-lg font-display text-foreground mb-3">{exp.company}</p>
-                <div className="flex flex-wrap gap-4 text-base text-muted-foreground font-mono mb-5">
+                <p className="text-sm lg:text-lg font-display text-foreground mb-2 lg:mb-3">{exp.company}</p>
+                <div className="flex flex-col lg:flex-row lg:flex-wrap gap-2 lg:gap-4 text-xs lg:text-base text-muted-foreground font-mono mb-3 lg:mb-5">
                   <span className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4" /> {exp.location}
+                    <MapPin className="w-3 lg:w-4 h-3 lg:h-4" /> {exp.location}
                   </span>
                   <span className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" /> {exp.duration}
+                    <Calendar className="w-3 lg:w-4 h-3 lg:h-4" /> {exp.duration}
                   </span>
                 </div>
 
-                <ul className="space-y-3">
+                <ul className="space-y-1 lg:space-y-3">
                   {exp.highlights.map((highlight, i) => (
-                    <li key={i} className="flex gap-3 text-base text-foreground/85 leading-relaxed">
-                      <span className="text-primary font-bold flex-shrink-0">→</span>
+                    <li key={i} className="flex gap-2 lg:gap-3 text-xs lg:text-base text-foreground/85 leading-relaxed">
+                      <span className="text-primary font-bold flex-shrink-0 mt-0.5">→</span>
                       <span>{highlight}</span>
                     </li>
                   ))}

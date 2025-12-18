@@ -1,16 +1,5 @@
 import nodemailer from "nodemailer";
 
-// Create transporter for Gmail
-// You'll need to use an App Password, not your regular Gmail password
-// Go to: https://myaccount.google.com/apppasswords
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL_USER || "",
-    pass: process.env.EMAIL_PASSWORD || "",
-  },
-});
-
 export interface ContactFormData {
   name: string;
   email: string;
@@ -19,8 +8,34 @@ export interface ContactFormData {
   timestamp?: Date;
 }
 
+function createTransporter() {
+  const emailUser = process.env.EMAIL_USER;
+  const emailPassword = process.env.EMAIL_PASSWORD;
+
+  console.log("📧 Email Config Debug:");
+  console.log("  - EMAIL_USER:", emailUser ? "✓ loaded" : "✗ MISSING");
+  console.log("  - EMAIL_PASSWORD:", emailPassword ? "✓ loaded (" + emailPassword.length + " chars)" : "✗ MISSING");
+
+  if (!emailUser || !emailPassword) {
+    console.error("❌ Missing email credentials! Check .env.local file.");
+  }
+
+  return nodemailer.createTransport({
+    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false, // TLS
+    auth: {
+      user: emailUser,
+      pass: emailPassword,
+    },
+  });
+}
+
 export async function sendContactFormEmail(data: ContactFormData): Promise<boolean> {
   try {
+    const transporter = createTransporter();
+    
     // Email to yourself
     const mailOptions = {
       from: process.env.EMAIL_USER,
@@ -50,21 +65,22 @@ export async function sendContactFormEmail(data: ContactFormData): Promise<boole
     };
 
     const info = await transporter.sendMail(mailOptions);
-    console.log("Email sent successfully:", info.messageId);
+    console.log("✅ Email sent successfully:", info.messageId);
     return true;
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.error("❌ Error sending email:", error);
     return false;
   }
 }
 
 export async function verifyEmailConfig(): Promise<boolean> {
   try {
+    const transporter = createTransporter();
     await transporter.verify();
-    console.log("Email configuration verified successfully");
+    console.log("✅ Email configuration verified successfully");
     return true;
   } catch (error) {
-    console.error("Email configuration error:", error);
+    console.error("❌ Email configuration error:", error);
     return false;
   }
 }

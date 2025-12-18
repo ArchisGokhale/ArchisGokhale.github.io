@@ -9,16 +9,16 @@ export default function Home() {
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8"
       >
         {/* Main Hero */}
-        <div className="md:col-span-2 steam-panel p-8 md:p-10 border border-secondary/40 rounded-lg">
-          <div className="space-y-6">
+        <div className="lg:col-span-2 steam-panel p-5 lg:p-10 border border-secondary/40 rounded-lg">
+          <div className="space-y-4 lg:space-y-6">
             <motion.h1 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-5xl md:text-6xl font-display font-bold text-glow"
+              className="text-3xl lg:text-6xl font-display font-bold text-glow"
             >
               ARCHIS GOKHALE
             </motion.h1>
@@ -27,7 +27,7 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="text-xl text-secondary font-mono tracking-wide font-semibold"
+              className="text-sm lg:text-xl text-secondary font-mono tracking-wide font-semibold"
             >
               Software Engineer • Systems Builder • ISRO Award Winner
             </motion.p>
@@ -36,7 +36,7 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-lg leading-relaxed text-foreground/85 max-w-2xl"
+              className="text-sm lg:text-lg leading-relaxed text-foreground/85 max-w-2xl"
             >
               Architecting resilient infrastructure and shipping production systems. Specialized in low-latency systems, cloud automation, and AI pipelines. Led ISRO SIH 2024 Gold—processing 40% faster. Currently @Northern Trust.
             </motion.p>
@@ -45,14 +45,14 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="flex gap-4 pt-4"
+              className="flex flex-col lg:flex-row gap-2 lg:gap-4 pt-2 lg:pt-4"
             >
-              <button className="flex items-center gap-2 px-6 py-3 bg-primary/15 border border-primary/60 text-primary font-mono text-base font-bold hover:bg-primary/25 transition-all rounded-sm">
-                <Zap className="w-5 h-5" />
+              <button className="flex items-center justify-center lg:justify-start gap-2 px-4 lg:px-6 py-2 lg:py-3 bg-primary/15 border border-primary/60 text-primary font-mono text-xs lg:text-base font-bold hover:bg-primary/25 transition-all rounded-sm">
+                <Zap className="w-4 lg:w-5 h-4 lg:h-5" />
                 View Work
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 lg:w-5 h-4 lg:h-5" />
               </button>
-              <button className="flex items-center gap-2 px-6 py-3 bg-secondary/15 border border-secondary/60 text-secondary font-mono text-base font-bold hover:bg-secondary/25 transition-all rounded-sm">
+              <button className="flex items-center justify-center lg:justify-start gap-2 px-4 lg:px-6 py-2 lg:py-3 bg-secondary/15 border border-secondary/60 text-secondary font-mono text-xs lg:text-base font-bold hover:bg-secondary/25 transition-all rounded-sm">
                 Get In Touch
               </button>
             </motion.div>

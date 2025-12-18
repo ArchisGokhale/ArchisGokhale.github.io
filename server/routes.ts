@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { sendContactFormEmail } from "./email";
-import { saveContactSubmission } from "./firebaseAdmin";
+import { saveContactSubmission } from "./submissions";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -23,23 +23,19 @@ export async function registerRoutes(
 
       const timestamp = new Date();
 
-      // Save to Firestore and send email in parallel
-      const [firestoreId, emailSent] = await Promise.all([
-        saveContactSubmission({ name, email, subject, message, timestamp }),
-        sendContactFormEmail({ name, email, subject, message, timestamp }),
-      ]);
+      // Save to Supabase
+      const submissionId = await saveContactSubmission({ name, email, subject, message, timestamp: timestamp.toISOString() });
 
-      if (firestoreId && emailSent) {
-        res.json({
-          success: true,
-          message: "Contact form submitted successfully",
-          submissionId: firestoreId,
-        });
-      } else {
-        res.status(500).json({
-          error: "Failed to process submission",
-        });
-      }
+      // Send email notification (don't fail if email doesn't work)
+      sendContactFormEmail({ name, email, subject, message, timestamp }).catch(err => {
+        console.error("Email notification failed (but form was saved):", err);
+      });
+
+      res.json({
+        success: true,
+        message: "Contact form submitted successfully",
+        submissionId: submissionId,
+      });
     } catch (error) {
       console.error("Contact form error:", error);
       res.status(500).json({
