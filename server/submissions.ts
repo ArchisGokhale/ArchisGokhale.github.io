@@ -18,9 +18,9 @@ export interface ContactSubmission {
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_ANON_KEY;
 
-console.log("🔍 Supabase Config Debug:");
-console.log("  - SUPABASE_URL:", supabaseUrl ? "✅ SET" : "❌ MISSING");
-console.log("  - SUPABASE_ANON_KEY:", supabaseKey ? "✅ SET" : "❌ MISSING");
+if (!supabaseUrl || !supabaseKey) {
+  console.warn("⚠️ Supabase credentials missing; submissions will not be persisted.");
+}
 
 const supabase = supabaseUrl && supabaseKey 
   ? createClient(supabaseUrl, supabaseKey)

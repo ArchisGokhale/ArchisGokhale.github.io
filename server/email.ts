@@ -18,10 +18,6 @@ function createTransporter() {
   const emailUser = process.env.EMAIL_USER;
   const emailPassword = process.env.EMAIL_PASSWORD;
 
-  console.log("📧 Email Config Debug:");
-  console.log("  - EMAIL_USER:", emailUser ? "✓ loaded" : "✗ MISSING");
-  console.log("  - EMAIL_PASSWORD:", emailPassword ? "✓ loaded (" + emailPassword.length + " chars)" : "✗ MISSING");
-
   if (!emailUser || !emailPassword) {
     console.error("❌ Missing email credentials! Check .env.local file.");
   }

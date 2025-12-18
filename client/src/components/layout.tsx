@@ -1,7 +1,9 @@
 import { useLocation } from "wouter";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { Code2, FolderGit2, User, Mail, Trophy, Download, Moon, Sun, Volume2, VolumeX } from "lucide-react";
+import { Code2, FolderGit2, User, Mail, Trophy, Download, Moon, Sun, Volume2, VolumeX, Menu, X } from "lucide-react";
 import { useLayoutControls } from "@/hooks/use-layout-controls";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { NAV_ITEMS, TECH_SKILLS, USER_INFO } from "@/constants/layout-config";
 import { NavItem } from "./layout/nav-item";
 import { ControlButtons } from "./layout/control-buttons";
@@ -9,6 +11,8 @@ import { ControlButtons } from "./layout/control-buttons";
 export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
   const { theme, soundEnabled, handleThemeToggle, handleSoundToggle, handleNavClick, playSound } = useLayoutControls();
+  const isMobile = useIsMobile();
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const iconMap = {
     PORTFOLIO: Code2,
@@ -18,6 +22,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
     CONTACT: Mail,
   } as const;
 
+  const handleNav = () => {
+    handleNavClick();
+    if (isMobile) {
+      setMobileNavOpen(false);
+    }
+  };
+
   return (
     <div className={cn(
       "flex h-screen flex-col lg:flex-row overflow-hidden transition-colors duration-300",
@@ -25,7 +36,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
     )}>
       {/* Top Controls - Mobile */}
       <div className="lg:hidden flex justify-between items-center px-3 py-2 border-b border-border bg-card/50 backdrop-blur-sm z-30 gap-2">
-        <h1 className="text-sm lg:text-xl font-display font-bold text-primary">{USER_INFO.name}</h1>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setMobileNavOpen((open) => !open)}
+            className="p-2 hover:bg-primary/20 rounded-sm transition-colors"
+            aria-label={mobileNavOpen ? 'Close navigation' : 'Open navigation'}
+          >
+            {mobileNavOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+          <h1 className="text-sm lg:text-xl font-display font-bold text-primary">{USER_INFO.name}</h1>
+        </div>
         <div className="flex gap-2">
           <button
             onClick={handleThemeToggle}
@@ -44,8 +64,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </div>
 
+      {/* Mobile overlay */}
+      <div
+        className={cn(
+          "fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden z-20",
+          mobileNavOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        )}
+        onClick={() => setMobileNavOpen(false)}
+      />
+
       {/* Sidebar */}
-      <aside className="w-full lg:w-80 border-b lg:border-b-0 lg:border-r border-border bg-gradient-to-b from-card to-background/50 px-4 lg:px-6 py-4 lg:py-6 flex flex-col justify-between z-20 backdrop-blur-md max-h-[40vh] lg:max-h-screen overflow-y-auto lg:overflow-visible">
+      <aside
+        className={cn(
+          "fixed lg:static inset-y-0 left-0 w-[88%] max-w-sm lg:w-80 border-b lg:border-b-0 lg:border-r border-border bg-gradient-to-b from-card to-background/50 px-4 lg:px-6 py-4 lg:py-6 flex flex-col justify-between z-30 lg:z-20 backdrop-blur-md h-full lg:h-auto overflow-y-auto lg:overflow-visible transition-transform duration-300",
+          mobileNavOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+        )}
+      >
         <div>
           <div className="mb-4 lg:mb-8 gradient-border p-3 lg:p-5 bg-card/80 border border-primary/30 rounded-sm">
             <h1 className="text-lg lg:text-3xl font-display font-bold text-primary tracking-wider text-glow">
@@ -71,7 +105,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   icon={Icon}
                   label={item.label}
                   isActive={isActive}
-                  onClick={handleNavClick}
+                  onClick={handleNav}
                 />
               );
             })}

@@ -23,8 +23,7 @@ export function NavItem({ href, icon: Icon, label, isActive, onClick }: NavItemP
         )}
       >
         <Icon className="w-5 h-5 flex-shrink-0" />
-        <span className="tracking-widest hidden md:inline">{label}</span>
-        <span className="tracking-widest md:hidden">{label.slice(0, 3)}</span>
+        <span className="tracking-widest">{label}</span>
         {isActive && (
           <span className="ml-auto w-2 h-2 bg-primary rounded-full animate-pulse" />
         )}

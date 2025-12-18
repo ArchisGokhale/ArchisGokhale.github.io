@@ -1,16 +1,20 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef, useMemo } from "react";
 import * as THREE from "three";
+import { useIsMobile } from "@/hooks/use-mobile";
 
-function SteamParticles() {
+function SteamParticles({ count }: { count: number }) {
   const ref = useRef<THREE.Points>(null);
-  
-  const particles = new Float32Array(3000 * 3);
-  for (let i = 0; i < 3000; i++) {
-    particles[i * 3] = (Math.random() - 0.5) * 50;
-    particles[i * 3 + 1] = (Math.random() - 0.5) * 50;
-    particles[i * 3 + 2] = (Math.random() - 0.5) * 50;
-  }
+
+  const particles = useMemo(() => {
+    const positions = new Float32Array(count * 3);
+    for (let i = 0; i < count; i++) {
+      positions[i * 3] = (Math.random() - 0.5) * 50;
+      positions[i * 3 + 1] = (Math.random() - 0.5) * 50;
+      positions[i * 3 + 2] = (Math.random() - 0.5) * 50;
+    }
+    return positions;
+  }, [count]);
 
   useFrame(() => {
     if (ref.current) {
@@ -25,7 +29,7 @@ function SteamParticles() {
         <bufferGeometry>
           <bufferAttribute attach="attributes-position" array={particles} count={particles.length / 3} itemSize={3} />
         </bufferGeometry>
-        <pointsMaterial size={0.15} color="#ff6b1a" opacity={0.6} />
+        <pointsMaterial size={0.12} color="#ff6b1a" opacity={0.6} />
       </points>
     </group>
   );
@@ -83,13 +87,20 @@ function AnimatedTorus() {
 }
 
 export function BackgroundScene() {
+  const isMobile = useIsMobile();
+  const particleCount = isMobile ? 1200 : 3000;
+
+  if (isMobile) {
+    return null;
+  }
+
   return (
     <div className="fixed inset-0 z-0 pointer-events-none">
-      <Canvas camera={{ position: [0, 0, 25], fov: 75 }}>
+      <Canvas camera={{ position: [0, 0, 25], fov: 75 }} dpr={[1, 1.5]}>
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1} />
         <pointLight position={[-10, -10, 10]} intensity={0.5} color="#1e90ff" />
-        <SteamParticles />
+        <SteamParticles count={particleCount} />
         <FloatingObjects />
         <AnimatedTorus />
       </Canvas>

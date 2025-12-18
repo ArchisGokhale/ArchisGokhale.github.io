@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Zap, Target } from "lucide-react";
+import { Link } from "wouter";
 import { CompanyShowcase } from "@/components/company-showcase";
 
 export default function Home() {
@@ -47,14 +48,18 @@ export default function Home() {
               transition={{ delay: 0.5 }}
               className="flex flex-col lg:flex-row gap-2 lg:gap-4 pt-2 lg:pt-4"
             >
-              <button className="flex items-center justify-center lg:justify-start gap-2 px-4 lg:px-6 py-2 lg:py-3 bg-primary/15 border border-primary/60 text-primary font-mono text-xs lg:text-base font-bold hover:bg-primary/25 transition-all rounded-sm">
-                <Zap className="w-4 lg:w-5 h-4 lg:h-5" />
-                View Work
-                <ArrowRight className="w-4 lg:w-5 h-4 lg:h-5" />
-              </button>
-              <button className="flex items-center justify-center lg:justify-start gap-2 px-4 lg:px-6 py-2 lg:py-3 bg-secondary/15 border border-secondary/60 text-secondary font-mono text-xs lg:text-base font-bold hover:bg-secondary/25 transition-all rounded-sm">
-                Get In Touch
-              </button>
+              <Link href="/projects">
+                <a className="flex items-center justify-center lg:justify-start gap-2 px-4 lg:px-6 py-2 lg:py-3 bg-primary/15 border border-primary/60 text-primary font-mono text-xs lg:text-base font-bold hover:bg-primary/25 transition-all rounded-sm">
+                  <Zap className="w-4 lg:w-5 h-4 lg:h-5" />
+                  View Work
+                  <ArrowRight className="w-4 lg:w-5 h-4 lg:h-5" />
+                </a>
+              </Link>
+              <Link href="/contact">
+                <a className="flex items-center justify-center lg:justify-start gap-2 px-4 lg:px-6 py-2 lg:py-3 bg-secondary/15 border border-secondary/60 text-secondary font-mono text-xs lg:text-base font-bold hover:bg-secondary/25 transition-all rounded-sm">
+                  Get In Touch
+                </a>
+              </Link>
             </motion.div>
           </div>
         </div>
