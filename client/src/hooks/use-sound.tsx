@@ -1,9 +1,10 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import { SOUND_CONFIGS, SOUND_CONSTANTS, type SoundType } from '@/constants/sound-config';
 
 interface SoundContextType {
   soundEnabled: boolean;
   toggleSound: () => void;
-  play: (type: 'click' | 'hover' | 'scroll' | 'success') => void;
+  play: (type: SoundType) => void;
 }
 
 const SoundContext = createContext<SoundContextType>({
@@ -12,20 +13,32 @@ const SoundContext = createContext<SoundContextType>({
   play: () => {},
 });
 
+const SOUND_ENABLED_KEY = 'soundEnabled';
+
 export function SoundProvider({ children }: { children: ReactNode }) {
   const [soundEnabled, setSoundEnabled] = useState(true);
+  const [mounted, setMounted] = useState(false);
+
+  // Initialize sound state from localStorage
+  useEffect(() => {
+    setMounted(true);
+    const saved = localStorage.getItem(SOUND_ENABLED_KEY);
+    if (saved !== null) {
+      setSoundEnabled(JSON.parse(saved));
+    }
+  }, []);
 
   const toggleSound = () => {
     setSoundEnabled(prev => {
       const newValue = !prev;
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('soundEnabled', String(newValue));
+      if (mounted) {
+        localStorage.setItem(SOUND_ENABLED_KEY, JSON.stringify(newValue));
       }
       return newValue;
     });
   };
 
-  const play = (type: 'click' | 'hover' | 'scroll' | 'success') => {
+  const play = (type: SoundType) => {
     if (!soundEnabled || typeof window === 'undefined') return;
 
     try {
@@ -44,32 +57,25 @@ export function SoundProvider({ children }: { children: ReactNode }) {
       gainNode2.connect(masterGain);
       masterGain.connect(audioContext.destination);
 
-      const configs: Record<typeof type, { freq1: number; freq2: number; duration: number; waveform: OscillatorType }> = {
-        click: { freq1: 800, freq2: 1200, duration: 0.12, waveform: 'sine' },
-        hover: { freq1: 600, freq2: 900, duration: 0.08, waveform: 'sine' },
-        scroll: { freq1: 400, freq2: 600, duration: 0.05, waveform: 'triangle' },
-        success: { freq1: 1000, freq2: 1500, duration: 0.25, waveform: 'sine' },
-      };
-
-      const config = configs[type];
+      const config = SOUND_CONFIGS[type];
       
       oscillator1.type = config.waveform;
       oscillator2.type = config.waveform;
       oscillator1.frequency.value = config.freq1;
       oscillator2.frequency.value = config.freq2;
 
-      masterGain.gain.setValueAtTime(0.25, audioContext.currentTime);
-      masterGain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + config.duration);
+      masterGain.gain.setValueAtTime(SOUND_CONSTANTS.MASTER_GAIN, audioContext.currentTime);
+      masterGain.gain.exponentialRampToValueAtTime(SOUND_CONSTANTS.MASTER_GAIN_END, audioContext.currentTime + config.duration);
 
-      gainNode.gain.setValueAtTime(0.6, audioContext.currentTime);
-      gainNode2.gain.setValueAtTime(0.4, audioContext.currentTime);
+      gainNode.gain.setValueAtTime(SOUND_CONSTANTS.OSC1_GAIN, audioContext.currentTime);
+      gainNode2.gain.setValueAtTime(SOUND_CONSTANTS.OSC2_GAIN, audioContext.currentTime);
 
       oscillator1.start(audioContext.currentTime);
       oscillator2.start(audioContext.currentTime);
       oscillator1.stop(audioContext.currentTime + config.duration);
       oscillator2.stop(audioContext.currentTime + config.duration);
     } catch (e) {
-      // Audio context error
+      // Audio context error - silently fail
     }
   };
 
