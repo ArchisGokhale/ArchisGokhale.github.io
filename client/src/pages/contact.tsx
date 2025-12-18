@@ -32,32 +32,22 @@ export default function Contact() {
     setIsSubmitting(true);
     
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || "";
-      const response = await fetch(`${apiUrl}/api/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+      // Open Google Form in new tab
+      window.open('https://forms.gle/24XdtimKu2Qit6MR9', '_blank');
+      
+      // Reset form
+      setFormData({ name: "", email: "", subject: "", message: "" });
+
+      toast({
+        title: "OPENING FORM",
+        description: "Google Form opened in new tab. Please submit there!",
+        className: "bg-black border-primary text-primary font-mono"
       });
-
-      if (response.ok) {
-        // Reset form
-        setFormData({ name: "", email: "", subject: "", message: "" });
-
-        toast({
-          title: "MESSAGE RECEIVED",
-          description: "Thanks for reaching out! I'll get back to you soon.",
-          className: "bg-black border-primary text-primary font-mono"
-        });
-      } else {
-        throw new Error("Failed to submit form");
-      }
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error("Error opening form:", error);
       toast({
         title: "ERROR",
-        description: "Failed to send message. Please try again.",
+        description: "Failed to open form. Please try again.",
         className: "bg-black border-red-500 text-red-500 font-mono"
       });
     } finally {
@@ -136,7 +126,7 @@ export default function Contact() {
             className="w-full bg-primary/10 hover:bg-primary/20 text-primary border border-primary/50 rounded-sm h-13 font-mono font-bold text-base tracking-widest transition-all duration-300 hover:shadow-[0_0_12px_rgba(255,107,26,0.3)]"
           >
             {isSubmitting ? (
-              <span className="animate-pulse">SENDING...</span>
+              <span className="animate-pulse">OPENING FORM...</span>
             ) : (
               <span className="flex items-center justify-center gap-3">
                 SEND MESSAGE <Send className="w-5 h-5" />
