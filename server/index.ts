@@ -8,9 +8,14 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
+import cors from "cors";
 
 const app = express();
 const httpServer = createServer(app);
+
+// CORS: allow only configured origin in production; allow localhost during dev
+const allowedOrigin = process.env.PROD_ORIGIN || "http://localhost:5173";
+app.use(cors({ origin: allowedOrigin, methods: ["GET", "POST"], credentials: false }));
 
 declare module "http" {
   interface IncomingMessage {
