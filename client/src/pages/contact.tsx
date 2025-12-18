@@ -11,20 +11,57 @@ export default function Contact() {
   const { toast } = useToast();
   const { play } = useSound();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     play('success');
     setIsSubmitting(true);
     
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast({
-        title: "MESSAGE RECEIVED",
-        description: "Thanks for reaching out! I'll get back to you soon.",
-        className: "bg-black border-primary text-primary font-mono"
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-    }, 1500);
+
+      if (response.ok) {
+        // Reset form
+        setFormData({ name: "", email: "", subject: "", message: "" });
+
+        toast({
+          title: "MESSAGE RECEIVED",
+          description: "Thanks for reaching out! I'll get back to you soon.",
+          className: "bg-black border-primary text-primary font-mono"
+        });
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "ERROR",
+        description: "Failed to send message. Please try again.",
+        className: "bg-black border-red-500 text-red-500 font-mono"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -46,6 +83,9 @@ export default function Contact() {
             <div className="space-y-3">
               <label className="text-base font-mono text-secondary font-bold uppercase">Your Name</label>
               <Input 
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="John Doe" 
                 className="bg-black/50 border-white/10 font-mono text-base focus:border-primary/50 focus:ring-primary/20 rounded-sm h-12"
                 required
@@ -54,8 +94,11 @@ export default function Contact() {
             <div className="space-y-3">
               <label className="text-base font-mono text-secondary font-bold uppercase">Email</label>
               <Input 
-                placeholder="hello@example.com" 
+                name="email"
                 type="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="hello@example.com" 
                 className="bg-black/50 border-white/10 font-mono text-base focus:border-primary/50 focus:ring-primary/20 rounded-sm h-12"
                 required
               />
@@ -65,6 +108,9 @@ export default function Contact() {
           <div className="space-y-3">
             <label className="text-base font-mono text-secondary font-bold uppercase">Subject</label>
             <Input 
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
               placeholder="Let's build something great" 
               className="bg-black/50 border-white/10 font-mono text-base focus:border-primary/50 focus:ring-primary/20 rounded-sm h-12"
               required
@@ -74,6 +120,9 @@ export default function Contact() {
           <div className="space-y-3">
             <label className="text-base font-mono text-secondary font-bold uppercase">Message</label>
             <Textarea 
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Tell me about your project, idea, or opportunity..." 
               className="bg-black/50 border-white/10 font-mono text-base focus:border-primary/50 focus:ring-primary/20 rounded-sm min-h-[180px]"
               required
