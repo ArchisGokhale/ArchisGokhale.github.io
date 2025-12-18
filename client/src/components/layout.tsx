@@ -1,9 +1,13 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
-import { Code2, FolderGit2, User, Mail, Trophy, Download } from "lucide-react";
+import { Code2, FolderGit2, User, Mail, Trophy, Download, Moon, Sun, Volume2, VolumeX } from "lucide-react";
+import { useTheme } from "@/hooks/use-theme";
+import { useSound } from "@/hooks/use-sound";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
+  const { theme, toggleTheme } = useTheme();
+  const { soundEnabled, toggleSound, play } = useSound();
 
   const navItems = [
     { href: "/", icon: Code2, label: "PORTFOLIO" },
@@ -13,10 +17,48 @@ export function Layout({ children }: { children: React.ReactNode }) {
     { href: "/contact", icon: Mail, label: "CONTACT" },
   ];
 
+  const handleThemeToggle = () => {
+    play('click');
+    toggleTheme();
+  };
+
+  const handleSoundToggle = () => {
+    play('click');
+    toggleSound();
+  };
+
+  const handleNavClick = () => {
+    play('click');
+  };
+
   return (
-    <div className="flex h-screen flex-col md:flex-row overflow-hidden bg-background">
+    <div className={cn(
+      "flex h-screen flex-col md:flex-row overflow-hidden transition-colors duration-300",
+      theme === 'dark' ? 'bg-background dark' : 'bg-background light'
+    )}>
+      {/* Top Controls - Mobile */}
+      <div className="md:hidden flex justify-between items-center p-4 border-b border-border bg-card/50 backdrop-blur-sm z-30">
+        <h1 className="text-lg font-display font-bold text-primary">ARCHIS</h1>
+        <div className="flex gap-2">
+          <button
+            onClick={handleThemeToggle}
+            className="p-2 hover:bg-primary/20 rounded-sm transition-colors"
+            title={theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+          >
+            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+          </button>
+          <button
+            onClick={handleSoundToggle}
+            className="p-2 hover:bg-primary/20 rounded-sm transition-colors"
+            title={soundEnabled ? 'Mute' : 'Unmute'}
+          >
+            {soundEnabled ? <Volume2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5" />}
+          </button>
+        </div>
+      </div>
+
       {/* Sidebar */}
-      <aside className="w-full md:w-72 border-b md:border-b-0 md:border-r border-border bg-gradient-to-b from-card to-background/50 p-4 md:p-6 flex flex-col justify-between z-20 backdrop-blur-md">
+      <aside className="w-full md:w-72 border-b md:border-b-0 md:border-r border-border bg-gradient-to-b from-card to-background/50 p-4 md:p-6 flex flex-col justify-between z-20 backdrop-blur-md md:flex">
         <div>
           <div className="mb-8 gradient-border p-4 bg-card/80 border border-primary/30">
             <h1 className="text-2xl font-display font-bold text-primary tracking-wider text-glow">
@@ -38,6 +80,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               return (
                 <Link key={item.href} href={item.href}>
                   <button
+                    onClick={handleNavClick}
                     className={cn(
                       "w-full flex items-center gap-3 px-4 py-2.5 text-xs font-mono transition-all duration-200 border rounded-sm",
                       isActive 
@@ -46,7 +89,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     )}
                   >
                     <Icon className="w-4 h-4 flex-shrink-0" />
-                    <span className="font-semibold tracking-widest">{item.label}</span>
+                    <span className="font-semibold tracking-widest hidden md:inline">{item.label}</span>
+                    <span className="font-semibold tracking-widest md:hidden">{item.label.slice(0, 3)}</span>
                     {isActive && (
                       <span className="ml-auto w-2 h-2 bg-primary rounded-full animate-pulse" />
                     )}
@@ -56,9 +100,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
             })}
           </nav>
 
-          <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent mb-6" />
+          <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent mb-6 hidden md:block" />
 
-          <div className="space-y-3">
+          <div className="space-y-3 hidden md:block">
             <div className="text-[10px] text-muted-foreground font-tech leading-relaxed space-y-1">
               <p><span className="text-secondary">»</span> Java • Python • TypeScript</p>
               <p><span className="text-primary">»</span> Spring Boot • React • Node.js</p>
@@ -67,19 +111,40 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
 
-        <div className="space-y-3 border-t border-border/30 pt-4">
-          <a href="#" className="flex items-center gap-2 text-xs font-mono text-secondary hover:text-primary transition-colors">
+        <div className="space-y-3 border-t border-border/30 pt-4 hidden md:block">
+          <a href="#" onClick={handleNavClick} className="flex items-center gap-2 text-xs font-mono text-secondary hover:text-primary transition-colors">
             <Download className="w-4 h-4" />
             <span>Download CV</span>
           </a>
           <div className="text-[9px] text-muted-foreground/60">
             Pune, India • Open to opportunities
           </div>
+
+          <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent mt-4" />
+          
+          <div className="flex gap-2 pt-4">
+            <button
+              onClick={handleThemeToggle}
+              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-mono bg-primary/10 border border-primary/30 text-primary hover:bg-primary/20 rounded-sm transition-all"
+              title={theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+            >
+              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              <span className="hidden lg:inline">{theme === 'dark' ? 'LIGHT' : 'DARK'}</span>
+            </button>
+            <button
+              onClick={handleSoundToggle}
+              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-mono bg-secondary/10 border border-secondary/30 text-secondary hover:bg-secondary/20 rounded-sm transition-all"
+              title={soundEnabled ? 'Mute' : 'Unmute'}
+            >
+              {soundEnabled ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
+              <span className="hidden lg:inline">{soundEnabled ? 'SOUND' : 'MUTE'}</span>
+            </button>
+          </div>
         </div>
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 overflow-auto relative z-10 p-4 md:p-8">
+      <main className="flex-1 overflow-auto relative z-10 p-4 md:p-8" onScroll={() => play('scroll')}>
         <div className="max-w-7xl mx-auto h-full">
           {children}
         </div>

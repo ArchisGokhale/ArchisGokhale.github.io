@@ -1,5 +1,5 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useRef } from "react";
+import { useRef, useMemo } from "react";
 import * as THREE from "three";
 
 function SteamParticles() {
@@ -38,6 +38,7 @@ function FloatingObjects() {
     if (group.current) {
       group.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.3) * 0.3;
       group.current.rotation.y = state.clock.elapsedTime * 0.15;
+      group.current.position.z = Math.sin(state.clock.elapsedTime * 0.5) * 2;
     }
   });
 
@@ -55,7 +56,29 @@ function FloatingObjects() {
         <tetrahedronGeometry args={[1.2]} />
         <meshPhongMaterial color="#ff6b1a" wireframe />
       </mesh>
+      <mesh position={[0, 0, -20]}>
+        <boxGeometry args={[3, 3, 3]} />
+        <meshPhongMaterial color="#00ff41" wireframe opacity={0.5} transparent />
+      </mesh>
     </group>
+  );
+}
+
+function AnimatedTorus() {
+  const ref = useRef<THREE.Mesh>(null);
+
+  useFrame((state) => {
+    if (ref.current) {
+      ref.current.rotation.x = state.clock.elapsedTime * 0.3;
+      ref.current.rotation.y = state.clock.elapsedTime * 0.5;
+    }
+  });
+
+  return (
+    <mesh ref={ref} position={[0, 0, -12]}>
+      <torusGeometry args={[4, 1, 32, 100]} />
+      <meshPhongMaterial color="#ff6b1a" wireframe />
+    </mesh>
   );
 }
 
@@ -65,8 +88,10 @@ export function BackgroundScene() {
       <Canvas camera={{ position: [0, 0, 25], fov: 75 }}>
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1} />
+        <pointLight position={[-10, -10, 10]} intensity={0.5} color="#1e90ff" />
         <SteamParticles />
         <FloatingObjects />
+        <AnimatedTorus />
       </Canvas>
     </div>
   );

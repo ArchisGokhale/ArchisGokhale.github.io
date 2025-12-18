@@ -42,36 +42,62 @@
 }
 
 :root {
-  /* Steam-Inspired Palette */
-  --background: 220 25% 8%; /* Dark steam blue */
-  --foreground: 210 100% 95%; /* Bright white */
-
+  /* Dark Mode - Default */
+  --background: 220 25% 8%;
+  --foreground: 210 100% 95%;
   --card: 220 20% 12%;
   --card-foreground: 210 100% 95%;
-
   --popover: 220 20% 12%;
   --popover-foreground: 210 100% 95%;
-
-  --primary: 30 100% 55%; /* Vivid Orange */
+  --primary: 30 100% 55%;
   --primary-foreground: 220 25% 8%;
-
-  --secondary: 220 100% 50%; /* Bright Blue */
+  --secondary: 220 100% 50%;
   --secondary-foreground: 220 25% 8%;
-
   --muted: 220 10% 25%;
   --muted-foreground: 220 10% 60%;
-
-  --accent: 40 100% 55%; /* Golden Yellow */
+  --accent: 40 100% 55%;
   --accent-foreground: 220 25% 8%;
-
   --destructive: 0 100% 50%;
   --destructive-foreground: 0 0% 100%;
-
   --border: 220 20% 20%;
   --input: 220 20% 15%;
   --ring: 30 100% 55%;
-
   --radius: 0.25rem;
+}
+
+.dark {
+  --background: 220 25% 8%;
+  --foreground: 210 100% 95%;
+  --card: 220 20% 12%;
+  --card-foreground: 210 100% 95%;
+  --primary: 30 100% 55%;
+  --secondary: 220 100% 50%;
+  --muted: 220 10% 25%;
+  --muted-foreground: 220 10% 60%;
+  --accent: 40 100% 55%;
+  --border: 220 20% 20%;
+}
+
+:root.light {
+  --background: 0 0% 98%;
+  --foreground: 220 25% 8%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 25% 8%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 25% 8%;
+  --primary: 30 100% 55%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 100% 40%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 220 10% 80%;
+  --muted-foreground: 220 10% 40%;
+  --accent: 40 100% 50%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 20% 90%;
+  --input: 0 0% 100%;
+  --ring: 30 100% 55%;
 }
 
 @layer base {
@@ -80,7 +106,14 @@
   }
   body {
     @apply font-mono antialiased bg-background text-foreground overflow-hidden;
+  }
+  
+  :root {
     background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+  }
+  
+  :root.light {
+    background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%);
   }
 }
 
@@ -88,6 +121,10 @@
   .steam-panel {
     background: linear-gradient(135deg, rgba(26, 31, 58, 0.8) 0%, rgba(10, 14, 39, 0.8) 100%);
     backdrop-filter: blur(10px);
+  }
+
+  :root.light .steam-panel {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 245, 247, 0.9) 100%);
   }
 
   .text-glow {
