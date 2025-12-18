@@ -1,42 +1,38 @@
-# Archis Portfolio
+# Archis Portfolio 🚀
 
-A full-stack portfolio site built with React/Vite and an Express API for the contact form. Includes mobile-first navigation, themed UI with sound toggles, and a 3D background that is disabled on mobile for performance.
+A bold, animated portfolio: mobile-first navigation drawer, linked CTAs, themed CRT/tech styling, optional 3D background (auto-skipped on mobile), and a production-ready contact pipeline.
 
-## Features
-- Mobile drawer navigation with full labels; CTA buttons route to Projects and Contact.
-- Contact pipeline: validation, 20 req/min/IP rate limit, CORS-guarded origin, Supabase persistence, and Gmail app-password email notifications.
-- Theming and sound toggles wrapped in global providers; glitch/CRT styling with optional background scene (Three.js) automatically skipped on mobile.
-- Production builds: Vite client → `dist/public`, esbuild-bundled server → `dist/index.cjs`; GitHub Pages build writes static client to `docs/` and preserves `CNAME`.
+## ✨ Highlights
+- Mobile drawer with full labels + active state; hero CTAs link to Projects and Contact.
+- Contact flow: validated inputs, gentle rate limiting, Supabase persistence, email notification.
+- Theme + sound toggles; glitch/CRT aesthetic; performant 3D scene disabled on phones.
+- One-command builds: Vite client, esbuild-bundled server, GitHub Pages static build (keeps `CNAME`).
 
-## Tech Stack
-- Frontend: React 19, Vite 7, Tailwind (inline config), framer-motion, wouter, lucide-react, TanStack Query, Three.js.
-- Backend: Express 4, Supabase client, Nodemailer (Gmail), CORS, esbuild bundling.
-- Tooling: TypeScript, tsx, drizzle config present for schema, VS Code tasks for `check` and `build`.
+## 🧭 Key Files
+- [client/src/App.tsx](client/src/App.tsx) – providers, layout, routing.
+- [client/src/components/layout.tsx](client/src/components/layout.tsx) – responsive shell with drawer nav.
+- [client/src/components/background-scene.tsx](client/src/components/background-scene.tsx) – Three.js scene (desktop only).
+- [client/src/pages/home.tsx](client/src/pages/home.tsx) – hero, stats, CTA links.
+- [server/index.ts](server/index.ts) – Express bootstrap, CORS, logging, dev middleware.
+- [server/routes.ts](server/routes.ts) – `/api/contact` endpoint with validation + rate limit.
+- [server/submissions.ts](server/submissions.ts) – Supabase writes for contact submissions.
+- [server/email.ts](server/email.ts) – Gmail transport for contact notifications.
+- [script/build.ts](script/build.ts) – client + server production bundle.
+- [script/build-gh-pages.ts](script/build-gh-pages.ts) – static client to `docs/` with `CNAME` copy.
 
-## Project Structure (key files)
-- [client/src/App.tsx](client/src/App.tsx) – wraps theme/sound providers, layout, and routes.
-- [client/src/components/layout.tsx](client/src/components/layout.tsx) – responsive layout with mobile drawer nav and control buttons.
-- [client/src/components/background-scene.tsx](client/src/components/background-scene.tsx) – 3D scene; disabled on mobile.
-- [client/src/pages/home.tsx](client/src/pages/home.tsx) – hero with linked CTAs; stats/companies.
-- [server/index.ts](server/index.ts) – Express bootstrap, CORS, logging, Vite dev middleware, production static serving.
-- [server/routes.ts](server/routes.ts) – `/api/contact` with validation and rate limiting.
-- [server/submissions.ts](server/submissions.ts) – Supabase client for persisting contact submissions.
-- [server/email.ts](server/email.ts) – Gmail transport and notification email.
-- [script/build.ts](script/build.ts) – full build (client + bundled server).
-- [script/build-gh-pages.ts](script/build-gh-pages.ts) – static client build to `docs/` for GitHub Pages + CNAME copy.
+## 🛠️ Stack
+- Frontend: React 19, Vite 7, Tailwind (inline), framer-motion, wouter, lucide-react, TanStack Query, Three.js.
+- Backend: Express 4, Supabase client, Nodemailer (Gmail), CORS, esbuild bundle.
+- Tooling: TypeScript, tsx, drizzle config, VS Code tasks (`check`, `build`).
 
-## Prerequisites
-- Node.js 18+ and npm.
-- Supabase project (anon key + URL) and Gmail app password for contact notifications.
-
-## Environment Variables
-Copy [.env.example](.env.example) to `.env.local` and fill:
-- `EMAIL_USER` / `EMAIL_PASSWORD` – Gmail app password creds for sending mail.
+## 🔑 Environment
+Copy [.env.example](.env.example) → `.env.local` and set:
+- `EMAIL_USER` / `EMAIL_PASSWORD` – Gmail app password creds.
 - `RECIPIENT_EMAIL` – destination inbox.
 - `SUPABASE_URL` / `SUPABASE_ANON_KEY` – Supabase project for contact submissions.
-- `PROD_ORIGIN` – allowed origin for CORS in production (e.g., `https://yourdomain.com`).
+- `PROD_ORIGIN` – allowed origin for CORS (e.g., `https://yourdomain.com`).
 
-## Supabase Table (contact_submissions)
+## 🗄️ Supabase Table
 Run in Supabase SQL editor:
 ```sql
 create table if not exists public.contact_submissions (
@@ -48,48 +44,40 @@ create table if not exists public.contact_submissions (
 	timestamp timestamptz not null default now()
 );
 ```
-No RLS enabled here; add policies if you later expose reads. The API writes with the anon key.
 
-## Running Locally
+## 🚦 Run & Develop
 ```bash
 npm install
-# Full stack (API + Vite dev middleware on port 5000)
+# Full stack dev (API + client middleware)
 npm run dev
-# Client-only Vite dev server (also port 5000 by default)
+# Client-only dev
 npm run dev:client
 ```
-The server integrates Vite in development; use only one dev command at a time to avoid port conflicts.
+Use a single dev command at a time to avoid port clashes.
 
-## Build & Deploy
+## 📦 Build & Ship
 ```bash
-# Production bundles (client → dist/public, server → dist/index.cjs)
+# Client → dist/public, Server → dist/index.cjs
 npm run build
-# Run production bundle
+# Run production server
 npm start
-# Static build for GitHub Pages (outputs to docs/ and copies CNAME)
+# Static client for GitHub Pages (outputs to docs/ + CNAME)
 npm run build:gh-pages
 ```
-Deploy options:
-- Node host: serve `dist/index.cjs` (Express API + static client).
-- GitHub Pages: push `docs/` after `npm run build:gh-pages` (static client only; API must be hosted separately).
 
-## API – Contact
-- Endpoint: `POST /api/contact`
+## 📮 Contact API
+- `POST /api/contact`
 - Body: `{ name, email, subject, message }`
-- Validation: name 1–100, email RFC-ish pattern ≤254, subject 1–200, message 1–5000 chars.
-- Rate limit: 20 requests/min per IP.
-- Behavior: saves to Supabase; fires email notification (non-blocking). Returns `{ success: true, submissionId }` on success, 400 on validation errors, 429 on rate limit, 500 on server errors.
-- CORS: allowed origin from `PROD_ORIGIN` (defaults to `http://localhost:5173` in dev).
+- Validates inputs, rate-limits per IP, saves to Supabase, triggers email notification.
+- Response: `{ success: true, submissionId }` on success; clear errors on validation/limit.
 
-## Security & Operations
-- `.env.local` is git-ignored; keep secrets out of commits. Rotate any previously committed keys.
-- Minimal logging; sensitive credentials are not printed. CORS locked to configured origin.
-- Rate limiting and input validation applied to contact endpoint.
+## 🎛️ UX & Perf Touches
+- Drawer nav closes on selection; full labels on mobile.
+- 3D background auto-disabled on mobile for smooth FPS.
+- Themed gradients, text glow, glitch accents, sound/theme toggles.
 
-## Known Notes
-- Vite reports large bundle chunks; consider future code-splitting if needed.
-- GitHub Dependabot reports one moderate vulnerability; review and update dependencies as appropriate.
-	- See repository Security tab → Dependabot alerts for the specific package and suggested update.
+## 🔍 Notes
+- Large bundle warning from Vite is expected; consider code-splitting later if desired.
 
 ## Scripts Quick Reference
 - `npm run dev` – dev server (API + Vite middleware).
