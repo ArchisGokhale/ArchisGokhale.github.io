@@ -1,4 +1,10 @@
 import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+import path from "path";
+
+// Load env for email creds even if main server config runs later
+const envPath = path.join(process.cwd(), ".env.local");
+dotenv.config({ path: envPath });
 
 export interface ContactFormData {
   name: string;

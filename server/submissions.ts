@@ -1,4 +1,10 @@
 import { createClient } from "@supabase/supabase-js";
+import dotenv from "dotenv";
+import path from "path";
+
+// Ensure env is loaded even if main server imports happen before config
+const envPath = path.join(process.cwd(), ".env.local");
+dotenv.config({ path: envPath });
 
 export interface ContactSubmission {
   id: string;
@@ -12,9 +18,9 @@ export interface ContactSubmission {
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_ANON_KEY;
 
-if (!supabaseUrl || !supabaseKey) {
-  console.warn("⚠️  Supabase credentials not configured. Contact submissions will not be saved.");
-}
+console.log("🔍 Supabase Config Debug:");
+console.log("  - SUPABASE_URL:", supabaseUrl ? "✅ SET" : "❌ MISSING");
+console.log("  - SUPABASE_ANON_KEY:", supabaseKey ? "✅ SET" : "❌ MISSING");
 
 const supabase = supabaseUrl && supabaseKey 
   ? createClient(supabaseUrl, supabaseKey)

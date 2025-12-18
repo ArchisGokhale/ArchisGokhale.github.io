@@ -1,4 +1,9 @@
-import "dotenv/config";
+// Load environment from project root (.env.local) explicitly
+import dotenv from "dotenv";
+import path from "path";
+
+const envPath = path.join(process.cwd(), ".env.local");
+dotenv.config({ path: envPath });
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
