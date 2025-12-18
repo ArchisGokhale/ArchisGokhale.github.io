@@ -1,16 +1,12 @@
 import { motion } from "framer-motion";
 import { Briefcase, MapPin, Calendar, Trophy, TrendingUp } from "lucide-react";
 import { CompanyShowcase } from "@/components/company-showcase";
-import northernTrust from '@assets/stock_images/northern_trust_compa_4dd19ad9.jpg';
-import beatsDre from '@assets/stock_images/apple_beats_by_dre_l_b48c2ee7.jpg';
-import buildspace from '@assets/stock_images/buildspace_logo_star_82a93f8f.jpg';
 
 const EXPERIENCES = [
   {
     id: 1,
     role: "SDE Intern – Platform Engineering / Resilience",
     company: "Northern Trust",
-    logo: northernTrust,
     location: "Pune, India",
     duration: "Jun 2025 – Present",
     highlights: [
@@ -24,7 +20,6 @@ const EXPERIENCES = [
     id: 2,
     role: "SDE Intern – Data & Product Engineering",
     company: "Beats by Dre (Apple)",
-    logo: beatsDre,
     location: "Remote / San Francisco, USA",
     duration: "Sep 2024 – Oct 2024",
     highlights: [
@@ -38,7 +33,6 @@ const EXPERIENCES = [
     id: 3,
     role: "SDE Intern – Full-Stack Engineering",
     company: "Buildspace (Top 7.4%)",
-    logo: buildspace,
     location: "San Francisco Bay, USA",
     duration: "Jun 2024 – Aug 2024",
     highlights: [
@@ -73,56 +67,52 @@ const ACHIEVEMENTS = [
 
 export default function Experience() {
   return (
-    <div className="space-y-8 pb-8">
+    <div className="space-y-10 pb-8">
       <header>
-        <h2 className="text-3xl font-display font-bold text-foreground tracking-wider">CAREER</h2>
-        <p className="text-xs font-mono text-muted-foreground mt-2">
+        <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground tracking-wider">CAREER</h2>
+        <p className="text-base font-mono text-muted-foreground mt-3">
           FAANG & Scale-ups | Infrastructure • AI/ML • Full-Stack | Award-Winning
         </p>
       </header>
 
-      {/* Work Experience with Logos */}
-      <div className="space-y-6">
-        <h3 className="text-lg font-display font-bold text-primary">WORK EXPERIENCE</h3>
+      {/* Work Experience */}
+      <div className="space-y-8">
+        <h3 className="text-2xl md:text-3xl font-display font-bold text-primary">WORK EXPERIENCE</h3>
         {EXPERIENCES.map((exp, index) => (
           <motion.div
             key={exp.id}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="steam-panel border border-border/30 p-6 hover:border-primary/40 transition-all group"
+            className="steam-panel border border-border/30 p-8 hover:border-primary/40 transition-all group rounded-lg"
           >
             <div className="flex items-start gap-6">
-              {/* Company Logo */}
+              {/* Company Icon */}
               <div className="flex-shrink-0">
-                <div className="w-20 h-20 steam-panel border border-border/30 rounded-sm p-2 flex items-center justify-center group-hover:border-primary/60 transition-all">
-                  <img 
-                    src={exp.logo} 
-                    alt={exp.company}
-                    className="w-full h-full object-contain"
-                  />
+                <div className="w-16 h-16 steam-panel border border-border/30 rounded-lg p-3 flex items-center justify-center group-hover:border-primary/60 transition-all">
+                  <Briefcase className="w-8 h-8 text-primary" />
                 </div>
               </div>
 
               {/* Content */}
               <div className="flex-1">
-                <h4 className="text-lg font-mono font-bold text-primary mb-1 group-hover:text-glow transition-all">
+                <h4 className="text-xl font-mono font-bold text-primary mb-2 group-hover:text-glow transition-all">
                   {exp.role}
                 </h4>
-                <p className="text-sm font-display text-foreground mb-2">{exp.company}</p>
-                <div className="flex flex-wrap gap-4 text-xs text-muted-foreground font-mono mb-4">
-                  <span className="flex items-center gap-1">
-                    <MapPin className="w-3 h-3" /> {exp.location}
+                <p className="text-lg font-display text-foreground mb-3">{exp.company}</p>
+                <div className="flex flex-wrap gap-4 text-base text-muted-foreground font-mono mb-5">
+                  <span className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4" /> {exp.location}
                   </span>
-                  <span className="flex items-center gap-1">
-                    <Calendar className="w-3 h-3" /> {exp.duration}
+                  <span className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4" /> {exp.duration}
                   </span>
                 </div>
 
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   {exp.highlights.map((highlight, i) => (
-                    <li key={i} className="flex gap-3 text-xs text-foreground/80 leading-relaxed">
-                      <span className="text-primary font-bold mt-1">→</span>
+                    <li key={i} className="flex gap-3 text-base text-foreground/85 leading-relaxed">
+                      <span className="text-primary font-bold flex-shrink-0">→</span>
                       <span>{highlight}</span>
                     </li>
                   ))}
@@ -133,89 +123,40 @@ export default function Experience() {
         ))}
       </div>
 
-      {/* Companies Showcase */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
-        className="steam-panel border border-secondary/30 p-6"
-      >
-        <CompanyShowcase />
-      </motion.div>
-
-      {/* Education & Achievements */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="steam-panel border border-accent/30 p-6"
-        >
-          <h3 className="text-lg font-display font-bold text-accent mb-4">EDUCATION</h3>
-          <div className="space-y-4">
-            <div>
-              <h4 className="font-mono font-bold text-foreground">B.Tech – Computer Science & Engineering</h4>
-              <p className="text-sm text-foreground/80">MIT World Peace University</p>
-              <p className="text-xs text-muted-foreground mt-1">
-                <span className="text-accent font-bold">GPA: 9.32/10</span> • Aug 2022 – Jul 2026 • Pune, India
-              </p>
-            </div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="steam-panel border border-secondary/30 p-6"
-        >
-          <h3 className="text-lg font-display font-bold text-secondary mb-4">TECHNICAL SKILLS</h3>
-          <div className="space-y-3 text-xs font-mono">
-            <div>
-              <span className="text-secondary font-bold">Languages:</span>
-              <p className="text-foreground/80 mt-1">Java, Python, TypeScript, C++, SQL, JavaScript</p>
-            </div>
-            <div>
-              <span className="text-secondary font-bold">Frameworks:</span>
-              <p className="text-foreground/80 mt-1">Spring Boot, React, Node.js, Flask, Express</p>
-            </div>
-            <div>
-              <span className="text-secondary font-bold">DevOps:</span>
-              <p className="text-foreground/80 mt-1">Terraform, Ansible, Docker, Kubernetes, GitHub Actions</p>
-            </div>
-            <div>
-              <span className="text-secondary font-bold">Cloud:</span>
-              <p className="text-foreground/80 mt-1">AWS, Azure, Power BI, GCP Lambda</p>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-
       {/* Achievements */}
       <div>
-        <h3 className="text-lg font-display font-bold text-primary mb-4">KEY ACHIEVEMENTS</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <h3 className="text-2xl md:text-3xl font-display font-bold text-secondary mb-8">ACHIEVEMENTS</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {ACHIEVEMENTS.map((achievement, index) => {
             const Icon = achievement.icon;
             return (
               <motion.div
-                key={index}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 + index * 0.05 }}
-                className="steam-panel border border-accent/30 p-4 flex gap-4"
+                key={achievement.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="steam-panel border border-border/30 p-8 hover:border-secondary/60 transition-all rounded-lg"
               >
-                <Icon className="w-8 h-8 text-accent flex-shrink-0 opacity-60" />
-                <div>
-                  <h4 className="font-mono font-bold text-foreground text-sm mb-1">{achievement.title}</h4>
-                  <p className="text-xs text-foreground/70">{achievement.desc}</p>
-                  <p className="text-[10px] text-muted-foreground mt-2">{achievement.year}</p>
-                </div>
+                <Icon className="w-8 h-8 text-secondary mb-4" />
+                <h4 className="font-display font-bold text-foreground text-lg mb-3">{achievement.title}</h4>
+                <p className="text-base text-foreground/75 leading-relaxed">{achievement.desc}</p>
+                <p className="text-base font-mono text-muted-foreground mt-4 font-semibold">{achievement.year}</p>
               </motion.div>
             );
           })}
         </div>
       </div>
+
+      {/* Company Showcase */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+        className="steam-panel border border-border/30 p-8 rounded-lg"
+      >
+        <h3 className="text-2xl md:text-3xl font-display font-bold text-accent mb-6">ORGANIZATIONS</h3>
+        <CompanyShowcase />
+      </motion.div>
     </div>
   );
 }

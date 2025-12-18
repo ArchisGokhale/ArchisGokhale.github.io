@@ -30,32 +30,44 @@ export function SoundProvider({ children }: { children: ReactNode }) {
 
     try {
       const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
-      const oscillator = audioContext.createOscillator();
+      
+      // Create layers for better sound
+      const oscillator1 = audioContext.createOscillator();
+      const oscillator2 = audioContext.createOscillator();
       const gainNode = audioContext.createGain();
+      const gainNode2 = audioContext.createGain();
+      const masterGain = audioContext.createGain();
 
-      oscillator.connect(gainNode);
-      gainNode.connect(audioContext.destination);
+      oscillator1.connect(gainNode);
+      oscillator2.connect(gainNode2);
+      gainNode.connect(masterGain);
+      gainNode2.connect(masterGain);
+      masterGain.connect(audioContext.destination);
 
-      const frequencies: Record<typeof type, number> = {
-        click: 800,
-        hover: 600,
-        scroll: 400,
-        success: 1000,
+      const configs: Record<typeof type, { freq1: number; freq2: number; duration: number; waveform: OscillatorType }> = {
+        click: { freq1: 800, freq2: 1200, duration: 0.12, waveform: 'sine' },
+        hover: { freq1: 600, freq2: 900, duration: 0.08, waveform: 'sine' },
+        scroll: { freq1: 400, freq2: 600, duration: 0.05, waveform: 'triangle' },
+        success: { freq1: 1000, freq2: 1500, duration: 0.25, waveform: 'sine' },
       };
 
-      const durations: Record<typeof type, number> = {
-        click: 0.1,
-        hover: 0.05,
-        scroll: 0.03,
-        success: 0.2,
-      };
+      const config = configs[type];
+      
+      oscillator1.type = config.waveform;
+      oscillator2.type = config.waveform;
+      oscillator1.frequency.value = config.freq1;
+      oscillator2.frequency.value = config.freq2;
 
-      oscillator.frequency.value = frequencies[type];
-      gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + durations[type]);
+      masterGain.gain.setValueAtTime(0.25, audioContext.currentTime);
+      masterGain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + config.duration);
 
-      oscillator.start(audioContext.currentTime);
-      oscillator.stop(audioContext.currentTime + durations[type]);
+      gainNode.gain.setValueAtTime(0.6, audioContext.currentTime);
+      gainNode2.gain.setValueAtTime(0.4, audioContext.currentTime);
+
+      oscillator1.start(audioContext.currentTime);
+      oscillator2.start(audioContext.currentTime);
+      oscillator1.stop(audioContext.currentTime + config.duration);
+      oscillator2.stop(audioContext.currentTime + config.duration);
     } catch (e) {
       // Audio context error
     }

@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
 import { Code2, Award, Github, ExternalLink, Zap } from "lucide-react";
-import dashboardImg from '@assets/generated_images/analytics_dashboard_interface.png';
-import infrastructureImg from '@assets/generated_images/cloud_infrastructure_design.png';
-import teamImg from '@assets/generated_images/team_collaboration_session.png';
 
 const PROJECTS = [
   {
@@ -13,7 +10,6 @@ const PROJECTS = [
     impact: "40% faster | ISRO VEDAS/MOSDAC adoption",
     tags: ["ML", "Python", "TensorFlow", "GeoServer", "Docker"],
     featured: true,
-    image: teamImg
   },
   {
     id: 2,
@@ -23,7 +19,6 @@ const PROJECTS = [
     impact: "35% MTTR reduction | 50+ systems automated",
     tags: ["Terraform", "Ansible", "Azure", "IaC", "CI/CD"],
     featured: true,
-    image: infrastructureImg
   },
   {
     id: 3,
@@ -33,7 +28,6 @@ const PROJECTS = [
     impact: "1M+ events/day | 40% ROI improvement",
     tags: ["Python", "Pandas", "Power BI", "AWS", "SQL"],
     featured: false,
-    image: dashboardImg
   },
   {
     id: 4,
@@ -43,7 +37,6 @@ const PROJECTS = [
     impact: "60% faster reconciliation | Dockerized CI/CD",
     tags: ["Java", "Spring Boot", "Docker", "GitHub Actions"],
     featured: false,
-    image: teamImg
   },
   {
     id: 5,
@@ -53,7 +46,6 @@ const PROJECTS = [
     impact: "30% latency ↓ | 10K+ concurrent users",
     tags: ["PyTorch", "TensorFlow", "P2PNet", "React", "Analytics"],
     featured: false,
-    image: dashboardImg
   },
   {
     id: 6,
@@ -63,74 +55,72 @@ const PROJECTS = [
     impact: "99.9% uptime | 4,100+ sites indexed",
     tags: ["React", "Flask", "AWS", "Geofencing", "ML"],
     featured: false,
-    image: infrastructureImg
   }
 ];
 
 export default function Projects() {
   return (
-    <div className="space-y-6 pb-8">
-      <header className="flex items-center justify-between border-b border-primary/20 pb-4">
+    <div className="space-y-10 pb-8">
+      <header className="flex items-center justify-between border-b border-primary/20 pb-6">
         <div>
-          <h2 className="text-3xl font-display font-bold text-foreground tracking-wider">PORTFOLIO</h2>
-          <p className="text-xs font-mono text-muted-foreground mt-1">
-            Selected Projects • <span className="text-primary">6 Featured</span> • Shipped to Production
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground tracking-wider">PORTFOLIO</h2>
+          <p className="text-base font-mono text-muted-foreground mt-3">
+            Selected Projects • <span className="text-primary font-bold">6 Featured</span> • Shipped to Production
           </p>
         </div>
       </header>
 
       {/* Featured Projects */}
-      <div className="space-y-6">
+      <div className="space-y-10">
         {PROJECTS.filter(p => p.featured).map((project, index) => (
           <motion.div
             key={project.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
-            {/* Image */}
-            <div className="md:col-span-1 steam-panel border border-border/30 aspect-square flex items-center justify-center rounded-sm overflow-hidden bg-muted/10 group hover:border-primary/60 transition-all">
-              <img 
-                src={project.image} 
-                alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
+            {/* Placeholder */}
+            <div className="md:col-span-1 steam-panel border border-border/30 aspect-square flex items-center justify-center rounded-lg bg-muted/10 hover:border-primary/60 transition-all">
+              <div className="text-center space-y-3">
+                <Code2 className="w-12 h-12 text-muted-foreground mx-auto" />
+                <p className="text-base text-muted-foreground font-mono">Image coming soon</p>
+              </div>
             </div>
 
             {/* Content */}
-            <div className="md:col-span-2 steam-panel border border-primary/20 p-6 hover:border-primary/60 transition-all">
-              <div className="flex items-start justify-between mb-4">
+            <div className="md:col-span-2 steam-panel border border-primary/20 p-8 hover:border-primary/60 transition-all rounded-lg">
+              <div className="flex items-start justify-between mb-6">
                 <div>
-                  <h3 className="text-lg font-display font-bold text-primary mb-1">{project.title}</h3>
-                  <p className="text-xs text-accent font-mono font-semibold">{project.subtitle}</p>
+                  <h3 className="text-2xl font-display font-bold text-primary mb-2">{project.title}</h3>
+                  <p className="text-base text-accent font-mono font-semibold">{project.subtitle}</p>
                 </div>
-                <Award className="w-5 h-5 text-primary opacity-50 flex-shrink-0" />
+                <Award className="w-6 h-6 text-primary opacity-50 flex-shrink-0" />
               </div>
 
-              <p className="text-sm text-foreground/80 mb-4 leading-relaxed">{project.description}</p>
+              <p className="text-lg text-foreground/85 mb-6 leading-relaxed">{project.description}</p>
 
-              <div className="mb-4 p-3 bg-primary/5 border border-primary/20 rounded-sm">
-                <div className="flex items-center gap-2 text-xs text-primary font-mono">
-                  <Zap className="w-4 h-4" />
+              <div className="mb-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
+                <div className="flex items-center gap-3 text-base text-primary font-mono font-semibold">
+                  <Zap className="w-5 h-5" />
                   <span>{project.impact}</span>
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-3 mb-6">
                 {project.tags.map(tag => (
-                  <span key={tag} className="text-[10px] px-2.5 py-1 bg-secondary/10 text-secondary border border-secondary/20 rounded-sm font-mono">
+                  <span key={tag} className="text-sm px-3 py-2 bg-secondary/10 text-secondary border border-secondary/20 rounded-lg font-mono font-semibold">
                     {tag}
                   </span>
                 ))}
               </div>
 
-              <div className="flex gap-3 justify-end pt-3 border-t border-white/5">
-                <button className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors font-mono">
-                  <Github className="w-3.5 h-3.5" /> Code
+              <div className="flex gap-4 justify-end pt-4 border-t border-white/5">
+                <button className="flex items-center gap-2 text-base text-muted-foreground hover:text-primary transition-colors font-mono font-semibold">
+                  <Github className="w-5 h-5" /> Code
                 </button>
-                <button className="flex items-center gap-1 text-xs text-muted-foreground hover:text-primary transition-colors font-mono">
-                  <ExternalLink className="w-3.5 h-3.5" /> Demo
+                <button className="flex items-center gap-2 text-base text-muted-foreground hover:text-primary transition-colors font-mono font-semibold">
+                  <ExternalLink className="w-5 h-5" /> Demo
                 </button>
               </div>
             </div>
@@ -140,26 +130,24 @@ export default function Projects() {
 
       {/* Other Notable Projects */}
       <div>
-        <h3 className="text-lg font-display font-bold text-secondary mb-4">OTHER PROJECTS</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <h3 className="text-2xl md:text-3xl font-display font-bold text-secondary mb-8">OTHER PROJECTS</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {PROJECTS.filter(p => !p.featured).map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 + index * 0.05 }}
-              className="steam-panel border border-border/30 p-4 hover:border-secondary/60 transition-all group overflow-hidden"
+              className="steam-panel border border-border/30 p-6 hover:border-secondary/60 transition-all group rounded-lg"
             >
-              <img 
-                src={project.image} 
-                alt={project.title}
-                className="w-full h-32 object-cover rounded-sm mb-3 group-hover:scale-105 transition-transform duration-300"
-              />
-              <h4 className="font-mono font-bold text-foreground text-sm mb-2 group-hover:text-primary transition-colors">{project.title}</h4>
-              <p className="text-xs text-foreground/60 mb-3">{project.description}</p>
-              <div className="flex flex-wrap gap-1.5">
+              <div className="w-full h-40 rounded-lg mb-4 bg-muted/10 border border-border/30 flex items-center justify-center">
+                <p className="text-base text-muted-foreground font-mono">Image coming soon</p>
+              </div>
+              <h4 className="font-mono font-bold text-foreground text-lg mb-3 group-hover:text-primary transition-colors">{project.title}</h4>
+              <p className="text-base text-foreground/65 mb-4 leading-relaxed">{project.description}</p>
+              <div className="flex flex-wrap gap-2">
                 {project.tags.slice(0, 3).map(tag => (
-                  <span key={tag} className="text-[9px] px-2 py-0.5 bg-muted/30 text-muted-foreground border border-border/30 rounded-sm">
+                  <span key={tag} className="text-xs px-3 py-1.5 bg-muted/30 text-muted-foreground border border-border/30 rounded-lg font-mono font-semibold">
                     {tag}
                   </span>
                 ))}

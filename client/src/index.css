@@ -79,25 +79,25 @@
 }
 
 :root.light {
-  --background: 0 0% 98%;
-  --foreground: 220 25% 8%;
+  --background: 0 0% 99%;
+  --foreground: 220 30% 15%;
   --card: 0 0% 100%;
-  --card-foreground: 220 25% 8%;
+  --card-foreground: 220 30% 15%;
   --popover: 0 0% 100%;
-  --popover-foreground: 220 25% 8%;
-  --primary: 30 100% 55%;
+  --popover-foreground: 220 30% 15%;
+  --primary: 30 100% 48%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 220 100% 40%;
+  --secondary: 220 95% 40%;
   --secondary-foreground: 0 0% 100%;
-  --muted: 220 10% 80%;
-  --muted-foreground: 220 10% 40%;
-  --accent: 40 100% 50%;
+  --muted: 220 15% 85%;
+  --muted-foreground: 220 30% 45%;
+  --accent: 40 100% 45%;
   --accent-foreground: 0 0% 100%;
-  --destructive: 0 100% 50%;
+  --destructive: 0 100% 45%;
   --destructive-foreground: 0 0% 100%;
-  --border: 220 20% 90%;
-  --input: 0 0% 100%;
-  --ring: 30 100% 55%;
+  --border: 220 20% 85%;
+  --input: 220 10% 95%;
+  --ring: 30 100% 48%;
 }
 
 @layer base {
@@ -105,7 +105,7 @@
     @apply border-border;
   }
   body {
-    @apply font-mono antialiased bg-background text-foreground overflow-hidden;
+    @apply font-mono antialiased bg-background text-foreground overflow-hidden text-base;
   }
   
   :root {
@@ -113,8 +113,13 @@
   }
   
   :root.light {
-    background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%);
+    background: linear-gradient(135deg, #fafbfc 0%, #f5f6f9 100%);
   }
+
+  h1 { @apply text-4xl md:text-5xl; }
+  h2 { @apply text-3xl md:text-4xl; }
+  h3 { @apply text-xl md:text-2xl; }
+  p { @apply text-base leading-relaxed; }
 }
 
 @layer utilities {
@@ -124,7 +129,7 @@
   }
 
   :root.light .steam-panel {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 245, 247, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 251, 252, 0.95) 100%);
   }
 
   .text-glow {
@@ -137,6 +142,12 @@
 
   .text-glow-secondary {
     text-shadow: 0 0 8px hsl(var(--secondary) / 0.6), 0 0 16px hsl(var(--secondary) / 0.4);
+  }
+
+  :root.light .text-glow,
+  :root.light .text-glow-accent,
+  :root.light .text-glow-secondary {
+    text-shadow: none;
   }
 
   .glitch-text {
