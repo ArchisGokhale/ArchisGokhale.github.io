@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { Code2, Award, Github, ExternalLink, Zap } from "lucide-react";
+import dashboardImg from '@assets/generated_images/analytics_dashboard_interface.png';
+import infrastructureImg from '@assets/generated_images/cloud_infrastructure_design.png';
+import teamImg from '@assets/generated_images/team_collaboration_session.png';
 
 const PROJECTS = [
   {
@@ -10,7 +13,7 @@ const PROJECTS = [
     impact: "40% faster | ISRO VEDAS/MOSDAC adoption",
     tags: ["ML", "Python", "TensorFlow", "GeoServer", "Docker"],
     featured: true,
-    imageAlt: "[ISRO Project Image]"
+    image: teamImg
   },
   {
     id: 2,
@@ -20,7 +23,7 @@ const PROJECTS = [
     impact: "35% MTTR reduction | 50+ systems automated",
     tags: ["Terraform", "Ansible", "Azure", "IaC", "CI/CD"],
     featured: true,
-    imageAlt: "[Infrastructure Architecture Diagram]"
+    image: infrastructureImg
   },
   {
     id: 3,
@@ -30,7 +33,7 @@ const PROJECTS = [
     impact: "1M+ events/day | 40% ROI improvement",
     tags: ["Python", "Pandas", "Power BI", "AWS", "SQL"],
     featured: false,
-    imageAlt: "[Dashboard Screenshot]"
+    image: dashboardImg
   },
   {
     id: 4,
@@ -40,7 +43,7 @@ const PROJECTS = [
     impact: "60% faster reconciliation | Dockerized CI/CD",
     tags: ["Java", "Spring Boot", "Docker", "GitHub Actions"],
     featured: false,
-    imageAlt: "[System Dashboard]"
+    image: teamImg
   },
   {
     id: 5,
@@ -50,7 +53,7 @@ const PROJECTS = [
     impact: "30% latency ↓ | 10K+ concurrent users",
     tags: ["PyTorch", "TensorFlow", "P2PNet", "React", "Analytics"],
     featured: false,
-    imageAlt: "[Heatmap Analytics]"
+    image: dashboardImg
   },
   {
     id: 6,
@@ -60,7 +63,7 @@ const PROJECTS = [
     impact: "99.9% uptime | 4,100+ sites indexed",
     tags: ["React", "Flask", "AWS", "Geofencing", "ML"],
     featured: false,
-    imageAlt: "[Map Visualization]"
+    image: infrastructureImg
   }
 ];
 
@@ -86,9 +89,13 @@ export default function Projects() {
             transition={{ delay: index * 0.1 }}
             className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
-            {/* Image Placeholder */}
-            <div className="md:col-span-1 steam-panel border border-border/30 aspect-square flex items-center justify-center rounded-sm overflow-hidden bg-muted/10">
-              <span className="text-muted-foreground text-xs text-center px-4 font-mono">{project.imageAlt}</span>
+            {/* Image */}
+            <div className="md:col-span-1 steam-panel border border-border/30 aspect-square flex items-center justify-center rounded-sm overflow-hidden bg-muted/10 group hover:border-primary/60 transition-all">
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
             </div>
 
             {/* Content */}
@@ -141,11 +148,16 @@ export default function Projects() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 + index * 0.05 }}
-              className="steam-panel border border-border/30 p-4 hover:border-secondary/60 transition-all group"
+              className="steam-panel border border-border/30 p-4 hover:border-secondary/60 transition-all group overflow-hidden"
             >
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="w-full h-32 object-cover rounded-sm mb-3 group-hover:scale-105 transition-transform duration-300"
+              />
               <h4 className="font-mono font-bold text-foreground text-sm mb-2 group-hover:text-primary transition-colors">{project.title}</h4>
               <p className="text-xs text-foreground/60 mb-3">{project.description}</p>
-              <div className="flex flex-wrap gap-1.5 mb-3">
+              <div className="flex flex-wrap gap-1.5">
                 {project.tags.slice(0, 3).map(tag => (
                   <span key={tag} className="text-[9px] px-2 py-0.5 bg-muted/30 text-muted-foreground border border-border/30 rounded-sm">
                     {tag}

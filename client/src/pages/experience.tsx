@@ -1,11 +1,16 @@
 import { motion } from "framer-motion";
 import { Briefcase, MapPin, Calendar, Trophy, TrendingUp } from "lucide-react";
+import { CompanyShowcase } from "@/components/company-showcase";
+import northernTrust from '@assets/stock_images/northern_trust_compa_4dd19ad9.jpg';
+import beatsDre from '@assets/stock_images/apple_beats_by_dre_l_b48c2ee7.jpg';
+import buildspace from '@assets/stock_images/buildspace_logo_star_82a93f8f.jpg';
 
 const EXPERIENCES = [
   {
     id: 1,
     role: "SDE Intern – Platform Engineering / Resilience",
     company: "Northern Trust",
+    logo: northernTrust,
     location: "Pune, India",
     duration: "Jun 2025 – Present",
     highlights: [
@@ -19,6 +24,7 @@ const EXPERIENCES = [
     id: 2,
     role: "SDE Intern – Data & Product Engineering",
     company: "Beats by Dre (Apple)",
+    logo: beatsDre,
     location: "Remote / San Francisco, USA",
     duration: "Sep 2024 – Oct 2024",
     highlights: [
@@ -32,6 +38,7 @@ const EXPERIENCES = [
     id: 3,
     role: "SDE Intern – Full-Stack Engineering",
     company: "Buildspace (Top 7.4%)",
+    logo: buildspace,
     location: "San Francisco Bay, USA",
     duration: "Jun 2024 – Aug 2024",
     highlights: [
@@ -74,7 +81,7 @@ export default function Experience() {
         </p>
       </header>
 
-      {/* Work Experience */}
+      {/* Work Experience with Logos */}
       <div className="space-y-6">
         <h3 className="text-lg font-display font-bold text-primary">WORK EXPERIENCE</h3>
         {EXPERIENCES.map((exp, index) => (
@@ -85,13 +92,25 @@ export default function Experience() {
             transition={{ delay: index * 0.1 }}
             className="steam-panel border border-border/30 p-6 hover:border-primary/40 transition-all group"
           >
-            <div className="flex items-start justify-between mb-4">
-              <div>
+            <div className="flex items-start gap-6">
+              {/* Company Logo */}
+              <div className="flex-shrink-0">
+                <div className="w-20 h-20 steam-panel border border-border/30 rounded-sm p-2 flex items-center justify-center group-hover:border-primary/60 transition-all">
+                  <img 
+                    src={exp.logo} 
+                    alt={exp.company}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="flex-1">
                 <h4 className="text-lg font-mono font-bold text-primary mb-1 group-hover:text-glow transition-all">
                   {exp.role}
                 </h4>
                 <p className="text-sm font-display text-foreground mb-2">{exp.company}</p>
-                <div className="flex flex-wrap gap-4 text-xs text-muted-foreground font-mono">
+                <div className="flex flex-wrap gap-4 text-xs text-muted-foreground font-mono mb-4">
                   <span className="flex items-center gap-1">
                     <MapPin className="w-3 h-3" /> {exp.location}
                   </span>
@@ -99,23 +118,30 @@ export default function Experience() {
                     <Calendar className="w-3 h-3" /> {exp.duration}
                   </span>
                 </div>
+
+                <ul className="space-y-2">
+                  {exp.highlights.map((highlight, i) => (
+                    <li key={i} className="flex gap-3 text-xs text-foreground/80 leading-relaxed">
+                      <span className="text-primary font-bold mt-1">→</span>
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <Briefcase className="w-6 h-6 text-primary/30 flex-shrink-0" />
             </div>
-
-            <ul className="space-y-2 mt-4">
-              {exp.highlights.map((highlight, i) => (
-                <li key={i} className="flex gap-3 text-xs text-foreground/80 leading-relaxed">
-                  <span className="text-primary font-bold mt-1">→</span>
-                  <span>{highlight}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-4 h-px bg-gradient-to-r from-transparent via-border/20 to-transparent" />
           </motion.div>
         ))}
       </div>
+
+      {/* Companies Showcase */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+        className="steam-panel border border-secondary/30 p-6"
+      >
+        <CompanyShowcase />
+      </motion.div>
 
       {/* Education & Achievements */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

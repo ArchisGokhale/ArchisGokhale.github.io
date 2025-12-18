@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Code2, Target, Lightbulb, Users } from "lucide-react";
+import profileImg from '@assets/generated_images/professional_developer_at_work.png';
 
 export default function About() {
   return (
@@ -37,9 +38,13 @@ export default function About() {
             </p>
           </div>
 
-          {/* Photo Placeholder */}
-          <div className="mt-8 aspect-video bg-muted/20 border border-dashed border-border rounded-sm flex items-center justify-center">
-            <span className="text-muted-foreground text-sm font-mono">[Your Photo Here – 16:9 aspect ratio recommended]</span>
+          {/* Photo */}
+          <div className="mt-8 aspect-video bg-muted/20 border border-border rounded-sm flex items-center justify-center overflow-hidden group hover:border-primary/60 transition-all">
+            <img 
+              src={profileImg} 
+              alt="Profile" 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
           </div>
         </motion.div>
 

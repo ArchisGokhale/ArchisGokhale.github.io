@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Zap, Target } from "lucide-react";
+import { CompanyShowcase } from "@/components/company-showcase";
+import profileImg from '@assets/generated_images/professional_developer_at_work.png';
 
 export default function Home() {
   return (
@@ -57,9 +59,13 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Placeholder for profile image */}
-          <div className="mt-8 aspect-video bg-muted/20 border border-dashed border-border rounded-sm flex items-center justify-center">
-            <span className="text-muted-foreground text-sm font-mono">[Hero Image / Video - Add your photo here]</span>
+          {/* Hero Image */}
+          <div className="mt-8 aspect-video bg-muted/20 border border-border rounded-sm flex items-center justify-center overflow-hidden group hover:border-primary/60 transition-all">
+            <img 
+              src={profileImg} 
+              alt="Professional developer workspace" 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
           </div>
         </div>
 
@@ -97,11 +103,21 @@ export default function Home() {
         </div>
       </motion.div>
 
+      {/* Company Showcase */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+        className="steam-panel border border-border/30 p-6"
+      >
+        <CompanyShowcase />
+      </motion.div>
+
       {/* Quick Overview */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.6 }}
+        transition={{ delay: 0.7 }}
         className="grid grid-cols-1 md:grid-cols-2 gap-6"
       >
         <div className="steam-panel p-6 border border-border/30">
