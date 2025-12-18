@@ -31,6 +31,12 @@ Copy [.env.example](.env.example) → `.env.local` and set:
 - `RECIPIENT_EMAIL` – destination inbox.
 - `SUPABASE_URL` / `SUPABASE_ANON_KEY` – Supabase project for contact submissions.
 - `PROD_ORIGIN` – allowed origin for CORS (e.g., `https://yourdomain.com`).
+- `VITE_API_URL` – backend URL for deployed frontend (leave empty for local dev).
+
+**🌐 Production Deployment:**
+1. **Backend:** Deploy [server/](server/) to Vercel/Render/Railway with env vars set.
+2. **Frontend:** Build with `VITE_API_URL=https://your-backend-url.com` pointing to your backend.
+3. **GitHub Pages:** Run `npm run build:gh-pages` to deploy static frontend to `docs/`.
 
 ## 🗄️ Supabase Table
 Run in Supabase SQL editor:
