@@ -1,8 +1,8 @@
-# GitHub Pages Setup Instructions
+# Custom Domain Setup (archisgokhale.codes)
 
-Your portfolio website is now ready to be deployed to GitHub Pages! ✨
+Your portfolio website is ready to be deployed to **archisgokhale.codes**! 🚀
 
-## Step 1: Configure GitHub Pages Settings
+## Step 1: GitHub Pages Configuration
 
 1. Go to your repository: `https://github.com/ArchisGokhale/ArchisGokhale.github.io`
 2. Click on **Settings** (gear icon)
@@ -13,66 +13,93 @@ Your portfolio website is now ready to be deployed to GitHub Pages! ✨
 6. Select folder: **/docs**
 7. Click **Save**
 
-## Step 2: Verify Deployment
+## Step 2: Configure Custom Domain
 
-- GitHub will automatically build and deploy your site
-- Your site will be live at: **https://ArchisGokhale.github.io**
-- Status: Check the "Deployments" section in your repository for real-time updates
+**GitHub will automatically:**
+- ✅ Detect the `CNAME` file in your `/docs` folder
+- ✅ Create an SSL/TLS certificate for your domain
+- ✅ Configure DNS settings
+
+This usually takes 5-10 minutes. You'll see the custom domain appear in the Pages settings.
+
+## Step 3: Set Up DNS Records
+
+Point your domain `archisgokhale.codes` to GitHub Pages by adding these DNS records:
+
+### Option A: Using A Records (Recommended)
+Add these A records to your domain DNS:
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+### Option B: Using CNAME Record (if your registrar supports it)
+```
+archisgokhale.codes CNAME ArchisGokhale.github.io
+```
+
+## Step 4: Verify
+
+- DNS propagation takes 15-30 minutes
+- Visit `https://archisgokhale.codes` to verify
+- Check GitHub Pages settings > Custom domain to confirm DNS is working
 
 ## What's Been Set Up
 
-✅ **Automated Build Process**
-- `npm run build:gh-pages` - Builds your React app to the `docs/` folder
-- Static HTML, CSS, and JavaScript ready for GitHub Pages
+✅ **CNAME File Created**
+- `docs/CNAME` - Points to your custom domain
+- `CNAME` (root) - Source file for reference
 
-✅ **GitHub Actions CI/CD** (Optional)
-- Workflow file created: `.github/workflows/deploy.yml`
-- Automatically builds and deploys on every push to `main` branch
-- To enable: Check if GitHub Actions is enabled in your repo settings
+✅ **Build Script Updated**
+- Automatically preserves CNAME file during builds
+- No manual intervention needed
 
-✅ **Static Site Generated**
-- Output folder: `docs/` 
-- Contains: `index.html`, assets, images
-- Ready for GitHub Pages hosting
+✅ **GitHub Actions Ready**
+- Automatically builds and deploys on every push
+- SSL/TLS certificate automatically managed by GitHub
 
-## Future Updates
-
-Whenever you want to update the site:
+## How to Update Your Site
 
 ```bash
-# Make your changes locally
-# Test with: npm run dev
+# Make changes
+# Test locally: npm run dev
 
 # Build for production
 npm run build:gh-pages
 
-# Commit and push
+# Deploy
 git add .
 git commit -m "Update: your changes"
 git push
 
-# Site updates automatically within ~1 minute
+# Site updates at archisgokhale.codes within ~1 minute
 ```
 
 ## Troubleshooting
 
 | Problem | Solution |
 |---------|----------|
-| Site shows 404 | Wait 2-3 minutes for deployment to complete |
-| Wrong version showing | Clear browser cache (Ctrl+Shift+Del) |
-| GitHub Pages not enabled | Go to Settings > Pages and select `/docs` folder on `main` branch |
-| Build fails locally | Run `npm install` to ensure all dependencies are installed |
+| Site shows 404 | Check GitHub Pages settings > Custom domain shows checkmark ✅ |
+| Custom domain not appearing | Wait 10 minutes for GitHub to process the CNAME file |
+| SSL certificate not issued | Ensure CNAME is in `/docs/CNAME` and domain is in GitHub settings |
+| DNS not working | Verify A records in your domain registrar (usually takes 30 mins) |
+| Shows github.io domain | Clear browser cache and wait for SSL cert (up to 24 hours) |
 
 ## Build Output
 
-Your static site size: **~2.4 MB** (compressed: **~400 KB**)
-- HTML: 1.54 kB
-- CSS: 109.49 kB 
-- JavaScript: 1.32 MB (includes React, libraries, and your app code)
-- Images: ~1.1 MB
+```
+✓ 2200 modules transformed
+✓ HTML: 1.54 kB
+✓ CSS: 109.49 kB
+✓ JavaScript: 1.32 MB
+✓ Images: ~1.1 MB
+✓ CNAME: Custom domain configured
+```
 
 ---
 
-🎉 **Your portfolio website is now hosted on GitHub Pages!**
+🎉 **Your portfolio is now hosted at: https://archisgokhale.codes**
 
-Visit: https://archisgokhale.github.io
+DNS propagation can take 15-30 minutes. If you see errors, they'll resolve automatically.

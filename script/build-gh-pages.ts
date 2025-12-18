@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import { fileURLToPath } from "url";
-import { rm } from "fs/promises";
+import { rm, copyFile } from "fs/promises";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, "..");
@@ -41,14 +41,18 @@ async function buildForGitHubPages() {
       })
     );
     
+    // Preserve CNAME file for custom domain
+    const cnameSource = path.resolve(projectRoot, "CNAME");
+    const cnameTarget = path.resolve(docsDir, "CNAME");
+    try {
+      await copyFile(cnameSource, cnameTarget);
+      console.log("✓ Preserved CNAME file for custom domain");
+    } catch (error) {
+      console.warn("⚠ CNAME file not found (optional)");
+    }
+    
     console.log("✅ Build complete! Static site ready in docs/ folder");
-    console.log("\n📄 Next steps:");
-    console.log("   1. git add . && git commit -m 'build: GitHub Pages deployment'");
-    console.log("   2. git push");
-    console.log("   3. Go to repo Settings > Pages");
-    console.log("   4. Set Source to 'Deploy from a branch'");
-    console.log("   5. Set Branch to 'main' and Folder to '/docs'");
-    console.log("   6. Your site will be live at: https://archisgokhale.github.io");
+    console.log("\n📄 Your site is ready for: https://archisgokhale.codes");
   } catch (error) {
     console.error("❌ Build failed:", error);
     process.exit(1);
